@@ -1,0 +1,24 @@
+[user]
+	name = Nathan Belisle
+{{- if (and (eq .chezmoi.os "darwin") (eq .chezmoi.hostname "C02G3015MD6V")) }}
+	email = nbelisle@hubspot.com
+{{ else }}
+	email = nbelisle11@gmail.com
+{{ end }}
+[core]
+	hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	filemode = false
+	editor = vim
+[remote "origin"]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+[pager]
+	branch = false
