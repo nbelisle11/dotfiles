@@ -61,6 +61,7 @@ brew install --cask signal
 brew install --cask notunes
 brew install --cask vlc
 brew install --cask zoom
+brew install --cask qbittorrent
 brew install --cask diff-so-fancy
 ```
 
