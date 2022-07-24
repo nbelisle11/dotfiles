@@ -43,7 +43,7 @@ alias cdiff="chezmoi git pull -- --rebase && chezmoi diff"
 alias cupdate="chezmoi update"
 alias capply="chezmoi apply"
 alias cstatus="chezmoi status"
-cedit() {chezmoi edit $@ && chezmoi apply}
+cedit() {chezmoi edit $@ && cupdate}
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export HISTTIMEFORMAT="%F %T %t"
