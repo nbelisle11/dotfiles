@@ -18,7 +18,7 @@ alias sortpom='mvn -o com.github.ekryd.sortpom:sortpom-maven-plugin:sort -Dsort.
 alias fmd='git commit -am "Fix maven dependencies"'
 alias mdt='mvn com.hubspot:dependency-info-maven-plugin:1.0-SNAPSHOT:verbose-tree'
 
-alias gstash="git stash --include-untracked" 
+alias gstash="git stash --include-untracked"
 
 alias hsp='hsenv prod && open https://private.hubteam.com/janus/request-jita/prod-firewall'
 alias hsq='hsenv qa'
