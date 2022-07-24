@@ -38,6 +38,13 @@ alias magenta-grep="GREP_COLOR='1;35' grep --color=always"
 alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
 alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
+#chezmoi
+alias cdiff="chezmoi git pull -- --rebase && chezmoi diff"
+alias cupdate="chezmoi update"
+alias capply="chezmoi update"
+alias cedit="chezmoi edit"
+alias cstatus="chezmoi status"
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export HISTTIMEFORMAT="%F %T %t"
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
