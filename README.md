@@ -38,6 +38,7 @@ mas install 1510445899 # Meeter for Zoom, Teams & Co
 mas install 441258766 # Magnet
 mas install 569089415 # Hour - World Clock
 mas install 497799835 # Xcode
+mas install 425955336 # Skitch - Snap. Mark up. Share.
 ```
 #Install remaining apps
 ```
@@ -49,7 +50,6 @@ brew install --cask boop
 brew install --cask caffeine
 brew install --cask unity-hub
 brew install --cask sequel-ace
-brew install --cask skitch
 brew install --cask alfred
 brew install --cask bluesnooze
 brew install --cask calibre
@@ -65,3 +65,7 @@ brew install --cask diff-so-fancy
 ```
 
 #Configure Alfred preferences and install powerpack from lifetime license in email "Your Alfred 5 Powerpack order"
+
+#Generate a [Personal Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for [intellij-settings and pycharm-settings](https://github.com/settings/tokens) repositories
+
+
