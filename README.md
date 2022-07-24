@@ -73,3 +73,7 @@ brew install --cask diff-so-fancy
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
+#Ravenstore
+#Finder->Go->Connect to Server
+afp://192.168.1.32
+#u/p from Lastpass
