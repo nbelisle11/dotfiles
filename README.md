@@ -64,6 +64,7 @@ brew install --cask zoom
 brew install --cask qbittorrent
 brew install --cask diff-so-fancy
 brew install --cask finicky
+brew tap VirtusLab/git-machete && brew install git-machete
 ```
 
 #Configure Alfred preferences and install powerpack from lifetime license in email "Your Alfred 5 Powerpack order"
