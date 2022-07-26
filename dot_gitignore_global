@@ -10,5 +10,4 @@ target-eclipse
 *.iml
 *.iws
 .run/Template*
-.mvn/.gradle-enterprise/
 .gradle-enterprise/
