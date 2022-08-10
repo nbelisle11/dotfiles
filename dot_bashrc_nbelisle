@@ -22,6 +22,7 @@ alias gstash="git stash --include-untracked"
 
 alias hsp='hsenv prod && open https://private.hubteam.com/janus/request-jita/prod-firewall'
 alias hsq='hsenv qa'
+alias hsj='hsenv -j'
 alias firewall='open https://private.hubteam.com/janus/request-jita/prod-firewall'
 
 alias mvncc='mvn clean test-compile -DskipValidation -Dmaven.skipTests -DskipTests -Dcheckstyle.skip -Dhs-swagger.skip=true -Derror-prone.disable.preconfigured.checks'
