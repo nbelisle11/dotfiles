@@ -110,3 +110,6 @@ setopt complete_aliases
 
 # don't check for new mail
 MAILCHECK=0
+
+# Use Java 11
+export JAVA_HOME="$JAVA11_HOME"
