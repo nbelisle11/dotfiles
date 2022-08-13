@@ -5,7 +5,7 @@ target
 target-eclipse
 .project
 .DS_Store
-.idea/*
+**/.idea/*
 !.idea/runConfigurations
 *.iml
 *.iws
