@@ -1,13 +1,38 @@
-target
+*~
+*.swp
+*.orig
+*.iml
+*.iws
+.DS_Store
+.run/Template*
+
+# Python artifacts
+*.pyc
+*.egg-info
+.pydevproject
+
+# Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Generated files
+bin/
+target/
+
+# VSCode files
+.vscode/
+
+# Eclipse files
 .classpath
+.project
 .settings
 .factorypath
+.checkstyle
 target-eclipse
-.project
-.DS_Store
+
+# IntelliJ files
 **/.idea/*
 !.idea/runConfigurations
 *.iml
-*.iws
-.run/Template*
 .gradle-enterprise/
