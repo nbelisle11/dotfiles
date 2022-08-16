@@ -19,6 +19,12 @@ brew install --cask brave-browser
 #log into github
 #[Setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
+#Edit dotfiles
+#get chezmoi environment variables, edit dotfile templates with new hostname
+```
+chezmoi data
+```
+
 #Initialize chezmoi
 ```
 chezmoi init git@github.com:nbelisle11/dotfiles.git
