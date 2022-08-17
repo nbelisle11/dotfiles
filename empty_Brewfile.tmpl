@@ -12,6 +12,8 @@ brew "python@3.10"
 {{- if .work }}
 brew "gh"
 brew "httpie"
+brew "maven"
+brew "percona-server"
 {{- end }}
 brew "mas"
 {{- if .personal }}
@@ -29,22 +31,20 @@ brew "hubspot/main/hsenv"
 brew "hubspot/main/hshs"
 brew "hubspot/main/bend"
 brew "hubspot/main/deploy-config-validator"
-brew "hubspot/main/hs-maven@3.8.4"
-brew "hubspot/main/hs-percona-server"
 brew "hubspot/main/japi-check"
 brew "hubspot/main/java-gen"
 brew "hubspot/main/mothership"
 brew "hubspot/main/mvndiff"
 brew "hubspot/main/nex"
-brew "hubspot/main/python@2"
 {{- end }}
 brew "virtuslab/git-machete/git-machete"
 cask "bluesnooze"
 {{- if .work }}
+cask "ccmenu"
 cask "finicky"
 cask "hs-java11"
 cask "hs-java17"
-cask "ccmenu"
+cask "java8"
 {{- end }}
 cask "boop"
 cask "brave-browser"
