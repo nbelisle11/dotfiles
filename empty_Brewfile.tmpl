@@ -2,26 +2,26 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-{{- if .work -}}
+{{- if .work }}
 tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
 {{ end }}
 tap "virtuslab/git-machete"
 brew "chezmoi"
 brew "diff-so-fancy"
 brew "python@3.10"
-{{- if .work -}}
+{{- if .work }}
 brew "gh"
 brew "httpie"
 {{ end }}
 brew "mas"
-{{- if .personal -}}
+{{- if .personal }}
 brew "mono"
 {{ end }}
 brew "nghttp2"
 brew "node"
 brew "wget"
 brew "zsh"
-{{- if .work -}}
+{{- if .work }}
 brew "hubspot/main/bender-proxy"
 brew "hubspot/main/hsenv"
 brew "hubspot/main/hshs"
@@ -38,7 +38,7 @@ brew "hubspot/main/python@2"
 {{ end }}
 brew "virtuslab/git-machete/git-machete"
 cask "bluesnooze"
-{{- if .work -}}
+{{- if .work }}
 cask "finicky"
 cask "hs-java11"
 cask "hs-java17"
@@ -48,7 +48,7 @@ cask "boop"
 cask "brave-browser"
 cask "caffeine"
 cask "calibre"
-{{- if .personal -}}
+{{- if .personal }}
 cask "discord"
 cask "unity-hub"
 {{ end }}
@@ -69,7 +69,7 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-{{- if .personal -}}
+{{- if .personal }}
 mas "NordVPN", id: 905953485
 {{ end }}
 mas "Skitch", id: 425955336
