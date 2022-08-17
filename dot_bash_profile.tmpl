@@ -1,6 +1,6 @@
 source ~/.bash_profile_nbelisle
 
-{{- if (and (eq .chezmoi.os "darwin") (or (eq .chezmoi.hostname "C02G3015MD6V") (eq .chezmoi.hostname "F5QH0HDQFC"))) }}
+{{- if .work }}
 # Added by nex: https://git.hubteam.com/HubSpot/nex
 . ~/.hubspot/shellrc
 {{ end }}
