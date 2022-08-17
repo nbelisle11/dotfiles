@@ -29,7 +29,7 @@ module.exports = {
         "*.monday.com/*", // form survey thing
         "*.dropbox.com/*", // form survey thing
         "*.hsforms.com/*", // forms
-
+        "*.lucid.app/*", // Lucid suite
       ],
       browser: "Google Chrome"
     }
