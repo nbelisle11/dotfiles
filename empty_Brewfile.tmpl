@@ -4,7 +4,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 {{- if .work }}
 tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
-{{ end }}
+{{- end }}
 tap "virtuslab/git-machete"
 brew "chezmoi"
 brew "diff-so-fancy"
@@ -12,11 +12,11 @@ brew "python@3.10"
 {{- if .work }}
 brew "gh"
 brew "httpie"
-{{ end }}
+{{- end }}
 brew "mas"
 {{- if .personal }}
 brew "mono"
-{{ end }}
+{{- end }}
 brew "nghttp2"
 brew "node"
 brew "wget"
@@ -35,7 +35,7 @@ brew "hubspot/main/mothership"
 brew "hubspot/main/mvndiff"
 brew "hubspot/main/nex"
 brew "hubspot/main/python@2"
-{{ end }}
+{{- end }}
 brew "virtuslab/git-machete/git-machete"
 cask "bluesnooze"
 {{- if .work }}
@@ -43,7 +43,7 @@ cask "finicky"
 cask "hs-java11"
 cask "hs-java17"
 cask "ccmenu"
-{{ end }}
+{{- end }}
 cask "boop"
 cask "brave-browser"
 cask "caffeine"
@@ -51,7 +51,7 @@ cask "calibre"
 {{- if .personal }}
 cask "discord"
 cask "unity-hub"
-{{ end }}
+{{- end }}
 cask "dropbox"
 cask "freedom"
 cask "google-drive"
@@ -71,6 +71,6 @@ mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
 {{- if .personal }}
 mas "NordVPN", id: 905953485
-{{ end }}
+{{- end }}
 mas "Skitch", id: 425955336
 mas "Timestamp Converter", id: 738226999
