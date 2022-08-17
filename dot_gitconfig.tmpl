@@ -1,10 +1,10 @@
 [user]
 	name = Nathan Belisle
-{{- if .work -}}
+{{- if .work }}
 	email = nbelisle@hubspot.com
-{{ else }}
+{{- else }}
 	email = nbelisle11@gmail.com
-{{ end }}
+{{- end }}
 [core]
 	hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
 	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
