@@ -1,3 +1,11 @@
+[data]
+{{- if (and (eq .chezmoi.os "darwin") (or (eq .chezmoi.hostname "C02G3015MD6V") (eq .chezmoi.hostname "F5QH0HDQFC"))) }}
+    work = true
+    personal = false
+{{ else }}
+    work = false
+    personal = true
+{{ end }}
 [edit]
     command = "subl"
     args = ["--wait"]
