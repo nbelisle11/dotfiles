@@ -1,5 +1,3 @@
-// ~/.finicky.js
-
 module.exports = {
   defaultBrowser: "Brave Browser",
   rewrite: [
