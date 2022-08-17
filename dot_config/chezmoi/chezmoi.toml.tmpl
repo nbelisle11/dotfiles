@@ -1,11 +1,34 @@
-[data]
-{{- if (and (eq .chezmoi.os "darwin") (or (eq .chezmoi.hostname "C02G3015MD6V") (eq .chezmoi.hostname "F5QH0HDQFC"))) }}
-    work = true
-    personal = false
+{{/* boolean feature tags */}}
+{{- $personal := false -}}{{/* true if this machine is for personal use */}}
+{{- $work := false -}}{{/* true if this machine belongs to my employer */}}
+{{- "" -}}
+
+{{/* work around unreliable hostname on darwin - https://github.com/twpayne/chezmoi/issues/1802 */}}
+{{- $hostname := .chezmoi.hostname -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
+{{-   if eq $computerName "Nate's MacBook Air" -}}
+{{-     $hostname = "nate-mba" -}}
+{{-   else if eq $computerName "Tom’s MacBook Pro 16" -}}
+{{-     $hostname = "nate-mbp-16" -}}
+{{-   else -}}
+{{-     $hostname = $computerName -}}
+{{-   end -}}
+{{- end -}}
+
+
+{{- if (and (eq .chezmoi.os "darwin") (or (eq $hostname "C02G3015MD6V") (eq $hostname "F5QH0HDQFC"))) }}
+{{-   $work = true -}}
+{{-   $personal = false -}}
 {{ else }}
-    work = false
-    personal = true
+{{-   $work = false -}}
+{{-   $personal = true -}}
 {{ end }}
+
+[data]
+    hostname = {{ $hostname | quote }}
+    personal = {{ $personal }}
+    work = {{ $work }}
 [edit]
     command = "subl"
     args = ["--wait"]
