@@ -43,6 +43,7 @@ alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
 #chezmoi
 alias cdiff="chezmoi git pull -- --rebase && chezmoi diff"
+alias cupdate="chezmoi git pull -- --rebase && chezmoi apply ~/.config/chezmoi/chezmoi.toml"
 alias cupdate="chezmoi update"
 alias capply="chezmoi apply"
 alias cstatus="chezmoi status"
