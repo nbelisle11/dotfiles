@@ -14,8 +14,6 @@ alias gcmvn='bash ~/scripts/gcmvn.sh'
 alias gpmvn='bash ~/scripts/gpmvn.sh'
 alias norg="gron --ungron"
 alias ungron="gron --ungron"
-alias cprun='bash ~/scripts/cprun.sh'
-alias cprunAll='bash ~/scripts/cprunAll.sh'
 alias sortpom='mvn -o com.github.ekryd.sortpom:sortpom-maven-plugin:sort -Dsort.sortDependencies=scope,groupId,artifactId -Dsort.predefinedSortOrder=custom_1 -Dsort.createBackupFile=false -Dsort.keepBlankLines'
 alias fmd='git commit -am "Fix maven dependencies"'
 alias mdt='mvn com.hubspot:dependency-info-maven-plugin:1.0-SNAPSHOT:verbose-tree'
@@ -51,5 +49,3 @@ alias cedit='bash ~/scripts/cedit.sh'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export HISTTIMEFORMAT="%F %T %t"
-export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
-export GITHUB_TOKEN=3e1e63eaed55c6ba7b7122bcc79faac6f77c2949
