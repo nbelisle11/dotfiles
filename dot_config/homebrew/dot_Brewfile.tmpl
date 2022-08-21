@@ -8,29 +8,36 @@ tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
 tap "virtuslab/git-machete"
 brew "chezmoi"
 brew "diff-so-fancy"
-brew "python@3.10"
 {{- if .work }}
 brew "gh"
+{{- end }}
+brew "python@3.10"
+{{- if .work }}
 brew "httpie"
-brew "maven"
-brew "percona-server"
 {{- end }}
 brew "mas"
+{{- if .work }}
+brew "maven"
+{{- end }}
 {{- if .personal }}
 brew "mono"
 {{- end }}
 brew "nghttp2"
 brew "node"
+{{- if .work }}
+brew "percona-server"
+{{- end }}
 brew "rename"
 brew "tldr"
 brew "wget"
 brew "zsh"
 {{- if .work }}
 brew "hubspot/main/bender-proxy"
-brew "hubspot/main/hsenv"
 brew "hubspot/main/hshs"
 brew "hubspot/main/bend"
 brew "hubspot/main/deploy-config-validator"
+brew "hubspot/main/hsenv"
+brew "hubspot/main/httpie-hubspot"
 brew "hubspot/main/japi-check"
 brew "hubspot/main/java-gen"
 brew "hubspot/main/mothership"
@@ -39,32 +46,44 @@ brew "hubspot/main/nex"
 {{- end }}
 brew "virtuslab/git-machete/git-machete"
 cask "bluesnooze"
-{{- if .work }}
-cask "ccmenu"
-cask "finicky"
-cask "hs-java11"
-cask "hs-java17"
-cask "java8"
-{{- end }}
 cask "boop"
 cask "brave-browser"
 cask "caffeine"
 cask "calibre"
+{{- if .work }}
+cask "ccmenu"
+{{- end }}
 {{- if .personal }}
 cask "discord"
 cask "unity-hub"
 cask "zoom"
 {{- end }}
 cask "dropbox"
+{{- if .work }}
+cask "finicky"
+{{- end }}
 cask "freedom"
 cask "google-drive"
+{{- if .work }}
+cask "hs-java11"
+cask "hs-java17"
+{{- end }}
 cask "iterm2"
 cask "itsycal"
+{{- if .work }}
+cask "java8"
+{{- end }}
 cask "jetbrains-toolbox"
 cask "notunes"
 cask "sublime-text"
 cask "tidal"
+{{- if .personal }}
+cask "unity-hub"
+{{- end }}
 cask "vlc"
+{{- if .personal }}
+cask "zoom"
+{{- end }}
 mas "GIPHY CAPTURE", id: 668208984
 mas "Hour", id: 569089415
 mas "Keynote", id: 409183694
