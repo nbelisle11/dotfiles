@@ -2,7 +2,7 @@
 
 # .Brewfile hash: {{ include "dot_config/homebrew/dot_Brewfile.tmpl" | sha256sum }}
 echo "Brewfile has likely changed. Printing diff: "
-diff -u ~/.config/homebrew/.Brewfile ~/.config/homebrew/.Brewfile.old | diff-so-fancy
+diff -u ~/.config/homebrew/.Brewfile.old ~/.config/homebrew/.Brewfile | diff-so-fancy
 read -r -p "Would you like to apply changes? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
