@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # .Brewfile hash: {{ include "dot_config/homebrew/dot_Brewfile.tmpl" | sha256sum }}
-echo "Brewfile has changed"
+echo "Brewfile has likely changed. Printing diff: "
 diff -u ~/.config/homebrew/.Brewfile ~/.config/homebrew/.Brewfile.old | diff-so-fancy
 read -r -p "Would you like to apply changes? [y/N] " response
-if [[ "$response" =~ ^([nN][oO]|[nN])$ ]]
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	echo "Brewfile has changed"
-    exit 1
+	echo "Applying brew bundle"
+	brew bundle --file=~/.config/homebrew/.Brewfile
+else
+    echo "Skipping brew bundle"
 fi
-
-brew bundle --file=~/.config/homebrew/.Brewfile
