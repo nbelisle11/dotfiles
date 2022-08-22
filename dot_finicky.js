@@ -30,6 +30,7 @@ module.exports = {
         "*.dropbox.com/*", // form survey thing
         "*.hsforms.com/*", // forms
         "*lucid.app/*", // Lucid suite
+        "*hubspot.slack.com/*", // Hubspot Slack
       ],
       browser: "Google Chrome"
     }
