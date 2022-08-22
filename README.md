@@ -39,9 +39,20 @@ chezmoi apply
 brew bundle
 ```
 
-#Configure Alfred preferences and install powerpack from lifetime license in email "Your Alfred 5 Powerpack order"
 
-#Generate a [Personal Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for [intellij-settings and pycharm-settings](https://github.com/settings/tokens) repositories
+
+
+
+
+# Preferences / Config
+Import iterm preferences
+Configure Alfred preferences and install powerpack from lifetime license in email "Your Alfred 5 Powerpack order"
+Generate a [Personal Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for [intellij-settings and pycharm-settings](https://github.com/settings/tokens) repositories
+Add IntelliJ plugins
+Setup and launch `login items`
+Configure ccmenu using [command line configuration](https://ccmenu.org/) by running command in `machine-config/preferences/ccmenu`
+[Import Sequel Ace Preferences](http://stackoverflow.com/a/37145386)
+
 
 #Apple Flags
 ```
