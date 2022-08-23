@@ -36,6 +36,7 @@ module.exports = {
         "*.hsforms.com/*", // forms
         "*lucid.app/*", // Lucid suite
         "*hubspot.slack.com/*", // Hubspot Slack
+        "*hubspot.pagerduty.com/*", // Hubspot Slack
       ],
       browser: "Google Chrome"
     }
