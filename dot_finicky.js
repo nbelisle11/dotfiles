@@ -6,11 +6,11 @@ module.exports = {
       match: ({ url }) => url.protocol === "http",
       url: { protocol: "https" }
     },
-    {
-      // Redirect all tyler apps to use https
-      match: ({ url }) => url.host === "synchro.tylerkindy.com",
-      url: { host: "tkindy-synchro.herokuapp.com" }
-    }
+    // {
+    //   // Redirect all tyler apps to use https
+    //   match: ({ url }) => url.host === "synchro.tylerkindy.com",
+    //   url: { host: "tkindy-synchro.herokuapp.com" }
+    // }
   ],
   handlers: [
     {
