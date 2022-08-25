@@ -32,11 +32,12 @@ module.exports = {
         "*.google.com/*", // GSuite (hopefully)
         "*.amazonaws.com/*", // AWS
         "*.monday.com/*", // form survey thing
-        "*.dropbox.com/*", // form survey thing
+        "*.dropbox.com/*", // Dropbox
         "*.hsforms.com/*", // forms
         "*lucid.app/*", // Lucid suite
         "*hubspot.slack.com/*", // Hubspot Slack
-        "*hubspot.pagerduty.com/*", // Hubspot Slack
+        "*hubspot.pagerduty.com/*", // Pagerduty
+        "*figma.com/*", // A mockup software I guess
       ],
       browser: "Google Chrome"
     }
