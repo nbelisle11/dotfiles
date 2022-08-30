@@ -7,7 +7,7 @@ tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
 {{- end }}
 tap "virtuslab/git-machete"
 {{- if .work }}
-tap "alerting-rules"
+brew "alerting-rules"
 {{- end }}
 brew "chezmoi"
 brew "diff-so-fancy"
