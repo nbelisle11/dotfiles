@@ -38,6 +38,8 @@ module.exports = {
         "*hubspot.slack.com/*", // Hubspot Slack
         "*hubspot.pagerduty.com/*", // Pagerduty
         "*figma.com/*", // A mockup software I guess
+        "*hubspot.hosted.panopto.com/*", // Video hosting platform for recordings
+        "*hubspot.zoom.us/*" // Zoom
       ],
       browser: "Google Chrome"
     }
