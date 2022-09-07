@@ -40,7 +40,8 @@ module.exports = {
         "*figma.com/*", // A mockup software I guess
         "*hubspot.hosted.panopto.com/*", // Video hosting platform for recordings
         "*hubspot.zoom.us/*", // Zoom
-        "*hubspot.service-now.com/*" // Service Now
+        "*hubspot.service-now.com/*", // Service Now
+        "*hubspot.signalfx.com/*" // SFX
       ],
       browser: "Google Chrome"
     }
