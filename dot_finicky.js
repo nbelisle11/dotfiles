@@ -39,7 +39,8 @@ module.exports = {
         "*hubspot.pagerduty.com/*", // Pagerduty
         "*figma.com/*", // A mockup software I guess
         "*hubspot.hosted.panopto.com/*", // Video hosting platform for recordings
-        "*hubspot.zoom.us/*" // Zoom
+        "*hubspot.zoom.us/*", // Zoom
+        "*hubspot.service-now.com/*" // Service Now
       ],
       browser: "Google Chrome"
     }
