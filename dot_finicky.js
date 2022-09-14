@@ -41,7 +41,7 @@ module.exports = {
         "*hubspot.hosted.panopto.com/*", // Video hosting platform for recordings
         "*hubspot.zoom.us/*", // Zoom
         "*hubspot.service-now.com/*", // Service Now
-        "*hubspot.signalfx.com/*" // SFX
+        "*hubspot.signalfx.com/*", // SFX
         "*hubspot.stackenterprise.co/*" // HS StackExchange
       ],
       browser: "Google Chrome"
