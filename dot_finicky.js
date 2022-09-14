@@ -42,6 +42,7 @@ module.exports = {
         "*hubspot.zoom.us/*", // Zoom
         "*hubspot.service-now.com/*", // Service Now
         "*hubspot.signalfx.com/*" // SFX
+        "*hubspot.stackenterprise.co/*" // HS StackExchange
       ],
       browser: "Google Chrome"
     }
