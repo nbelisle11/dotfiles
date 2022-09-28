@@ -53,6 +53,10 @@ Setup and launch `login items`
 Configure ccmenu using [command line configuration](https://ccmenu.org/) by running command in `machine-config/preferences/ccmenu`
 [Import Sequel Ace Preferences](http://stackoverflow.com/a/37145386)
 
+#Passwords
+```
+security add-generic-password -a nbelisle -s Janus -w
+```
 
 #Apple Flags
 ```
