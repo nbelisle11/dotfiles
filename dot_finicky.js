@@ -44,6 +44,7 @@ module.exports = {
         "*hubspot.signalfx.com/*", // SFX
         "*hubspot.stackenterprise.co/*", // HS StackExchange
         "*.loom.com/*", // Loom
+        "*.asana.com/*", // Asana
       ],
       browser: "Google Chrome"
     }
