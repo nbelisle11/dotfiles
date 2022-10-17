@@ -45,6 +45,7 @@ module.exports = {
         "*hubspot.stackenterprise.co/*", // HS StackExchange
         "*.loom.com/*", // Loom
         "*.asana.com/*", // Asana
+        "*.hubapi.com/*", // hubapi
       ],
       browser: "Google Chrome"
     }
