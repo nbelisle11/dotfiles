@@ -20,9 +20,9 @@ alias mdt='mvn com.hubspot:dependency-info-maven-plugin:1.0-SNAPSHOT:verbose-tre
 
 alias gstash="git stash --include-untracked"
 
-alias hsp='hsenv prod && open https://private.hubteam.com/janus/request-jita/prod-firewall'
-alias hsq='hsenv qa'
-alias hsj='hsenv -j'
+alias hsp='expect ~/scripts/hsp.sh && open https://private.hubteam.com/janus/request-jita/prod-firewall'
+alias hsq='expect ~/scripts/hsq.sh'
+alias hsj='expect ~/scripts/hsj.sh'
 alias firewall='open https://private.hubteam.com/janus/request-jita/prod-firewall'
 
 alias mvncc='mvn clean test-compile -DskipValidation -Dmaven.skipTests -DskipTests -Dcheckstyle.skip -Dhs-swagger.skip=true -Derror-prone.disable.preconfigured.checks'
