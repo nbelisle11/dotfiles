@@ -6,7 +6,7 @@ set JANUS_PASS [exec security find-generic-password -s Janus -w]
 
 spawn hsenv -j
 
-expect "Janus username [nbelisle]: "
+expect "Janus username"
 
 send -- "\r"
 
