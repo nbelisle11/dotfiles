@@ -46,7 +46,7 @@ module.exports = {
         "*.loom.com/*", // Loom
         "*.asana.com/*", // Asana
         "*.hubapi.com/*", // hubapi
-        "*.go/*", // golinks
+        "*go/*", // golinks
       ],
       browser: "Google Chrome"
     }
