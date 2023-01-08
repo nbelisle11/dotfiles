@@ -12,7 +12,7 @@
 	filemode = false
 	editor = vim
 {{- if .work }}
-	core.sshCommand = sshc
+	sshCommand = bash ~/scripts/sshc.sh
 {{- end }}
 [remote "origin"]
 	prune = true
