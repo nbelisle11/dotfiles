@@ -47,6 +47,7 @@ module.exports = {
         "*.asana.com/*", // Asana
         "*.hubapi.com/*", // hubapi
         "*go/*", // golinks
+        "*hubspot.officespacesoftware.com/*", // Hubspace
       ],
       browser: "Google Chrome"
     }
