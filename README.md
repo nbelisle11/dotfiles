@@ -7,12 +7,12 @@
 
 #Setup Iterm, oh-my-zsh, and dotfiles
 ```
-brew install --cask iterm2
+opt/homebrew/bin/brew install --cask iterm2
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-brew install chezmoi
-brew install git-lfs
-brew install --cask sublime-text
-brew install --cask brave-browser
+opt/homebrew/bin/brew install chezmoi
+opt/homebrew/bin/brew install git-lfs
+opt/homebrew/bin/brew install --cask sublime-text
+opt/homebrew/bin/brew install --cask brave-browser
 ```
 
 #Setup brave with last pass
