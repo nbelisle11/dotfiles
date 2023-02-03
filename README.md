@@ -20,16 +20,27 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 #[Setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 #Edit dotfiles
+#find chezmoi install directory and prefix the following commands with the latest `bin` folder. Examples assume version 2.29.4
 #get chezmoi environment variables, edit dotfile templates with new hostname
 ```
-chezmoi data
+/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi data
 ```
 
 #Initialize chezmoi
 ```
 chezmoi init git@github.com:nbelisle11/dotfiles.git
-chezmoi diff
-chezmoi apply
+```
+
+#Get the chezmoi config directory from chezmoi data and apply the chezmoi config before applying the rest of the repo
+```
+/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi diff ~/.config/chezmoi/chezmoi.toml
+/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi apply ~/.config/chezmoi/chezmoi.toml
+```
+
+#Apply the rest of the chezmoi repo
+```
+/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi diff
+/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi apply
 ```
 
 #Clone Machine Config and configure iterm
