@@ -20,12 +20,10 @@ brew "python@3.9"
 brew "python@3.10"
 {{- if .work }}
 brew "hs-kubectl"
+{{- end }}
 brew "httpie"
-{{- end }}
 brew "mas"
-{{- if .work }}
 brew "maven"
-{{- end }}
 brew "mono"
 brew "nghttp2"
 brew "node"
@@ -86,7 +84,9 @@ cask "jetbrains-toolbox"
 cask "keka"
 cask "mat"
 cask "notunes"
+cask "openjdk"
 cask "obsidian"
+cask "qbittorrent"
 cask "sequel-ace"
 cask "signal"
 cask "steam"
