@@ -4,9 +4,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 {{- if .work }}
 tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
-{{- end }}
-tap "virtuslab/git-machete"
-{{- if .work }}
 brew "alerting-rules"
 {{- end }}
 brew "chezmoi"
@@ -16,6 +13,7 @@ brew "expect"
 brew "gh"
 {{- end }}
 brew "git-lfs"
+brew "git-machete"
 brew "python@3.9"
 brew "python@3.10"
 {{- if .work }}
@@ -49,7 +47,6 @@ brew "hubspot/main/mothership"
 brew "hubspot/main/mvndiff"
 brew "hubspot/main/nex"
 {{- end }}
-brew "virtuslab/git-machete/git-machete"
 cask "alfred"
 cask "bartender"
 cask "bluesnooze"
