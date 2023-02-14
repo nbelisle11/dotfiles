@@ -13,7 +13,6 @@ brew "expect"
 brew "gh"
 {{- end }}
 brew "git-lfs"
-brew "git-machete"
 brew "python@3.9"
 brew "python@3.10"
 {{- if .work }}
@@ -25,7 +24,9 @@ brew "maven"
 brew "mono"
 brew "nghttp2"
 brew "node"
+{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 brew "openjdk"
+{{- end }}
 {{- if .work }}
 brew "percona-server"
 {{- end }}
@@ -49,6 +50,7 @@ brew "hubspot/main/nex"
 {{- end }}
 cask "alfred"
 cask "bartender"
+cask "bitwarden"
 cask "bluesnooze"
 cask "boop"
 cask "brave-browser"
@@ -58,10 +60,10 @@ cask "calibre"
 cask "ccmenu"
 {{- end }}
 cask "discord"
-{{- if .personal }}
+{{- if (and .personal (not (eq .chezmoi.hostname "nate-mba"))) }}
 cask "unity-hub"
-cask "zoom"
 {{- end }}
+cask "zoom"
 cask "dotnet-sdk"
 cask "dropbox"
 {{- if .work }}
@@ -78,9 +80,13 @@ cask "itsycal"
 {{- if .work }}
 cask "java8"
 {{- end }}
+{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 cask "jetbrains-toolbox"
+{{- end }}
 cask "keka"
+{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 cask "mat"
+{{- end }}
 cask "notunes"
 cask "obsidian"
 cask "qbittorrent"

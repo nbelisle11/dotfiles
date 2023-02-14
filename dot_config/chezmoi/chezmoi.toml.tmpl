@@ -36,5 +36,7 @@
 [git]
     autoCommit = true
     autoPush = true
+{{- if lookPath "diff-so-fancy" }}
 [diff]
     pager = "diff-so-fancy"
+{{- end }}
