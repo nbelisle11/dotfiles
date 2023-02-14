@@ -87,11 +87,13 @@ cask "keka"
 {{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 cask "mat"
 {{- end }}
+cask "nordvpn"
 cask "notunes"
 cask "obsidian"
 cask "qbittorrent"
 cask "sequel-ace"
 cask "signal"
+cask "slack"
 cask "steam"
 cask "sublime-text"
 cask "tidal"
@@ -106,8 +108,5 @@ mas "Hour", id: 569089415
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-{{- if .personal }}
-mas "NordVPN", id: 905953485
-{{- end }}
 mas "Skitch", id: 425955336
 mas "Timestamp Converter", id: 738226999
