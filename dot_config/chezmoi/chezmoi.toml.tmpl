@@ -30,7 +30,9 @@
     personal = {{ $personal }}
     work = {{ $work }}
 [edit]
+{{- if lookPath "diff-so-fancy" }}
     command = "subl"
+{{- end }}
     args = ["--wait"]
     hardlink = false
 [git]
