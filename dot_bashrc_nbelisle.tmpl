@@ -16,14 +16,9 @@ alias norg="gron --ungron"
 alias ungron="gron --ungron"
 alias sortpom='mvn -o com.github.ekryd.sortpom:sortpom-maven-plugin:sort -Dsort.sortDependencies=scope,groupId,artifactId -Dsort.predefinedSortOrder=custom_1 -Dsort.createBackupFile=false -Dsort.keepBlankLines'
 alias fmd='git commit -am "Fix maven dependencies"'
-alias mdt='mvn com.hubspot:dependency-info-maven-plugin:1.0-SNAPSHOT:verbose-tree'
+alias mdt='mvn dependency:tree'
 
 alias gstash="git stash --include-untracked"
-
-alias hsp='expect ~/scripts/hsp.sh && open https://private.hubteam.com/janus/request-jita/prod-firewall'
-alias hsq='expect ~/scripts/hsq.sh'
-alias hsj='expect ~/scripts/hsj.sh'
-alias firewall='open https://private.hubteam.com/janus/request-jita/prod-firewall'
 
 alias mvncc='mvn clean test-compile -DskipValidation -Dmaven.skipTests -DskipTests -Dcheckstyle.skip -Dhs-swagger.skip=true -Derror-prone.disable.preconfigured.checks'
 alias mvndcc='mvnd clean test-compile -DskipValidation -Dmaven.skipTests -DskipTests -Dcheckstyle.skip -Dhs-swagger.skip=true -Derror-prone.disable.preconfigured.checks'

@@ -1,10 +1,6 @@
 [user]
-	name = Nathan Belisle
-{{- if .work }}
-	email = nbelisle@hubspot.com
-{{- else }}
+	name = Nate Belisle
 	email = nbelisle11@gmail.com
-{{- end }}
 [core]
 	hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
 	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
@@ -12,7 +8,7 @@
 	filemode = false
 	editor = vim
 {{- if .work }}
-	sshCommand = bash ~/scripts/sshc.sh
+	sshCommand = bash {{ .chezmoi.homeDir }}/scripts/sshc.sh
 {{- end }}
 [remote "origin"]
 	prune = true
