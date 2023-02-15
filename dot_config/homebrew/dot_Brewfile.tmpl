@@ -2,53 +2,28 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-{{- if .work }}
-tap "hubspot/main", "git@git.hubteam.com:HubSpot/homebrew-main.git"
-brew "alerting-rules"
-{{- end }}
 brew "chezmoi"
 brew "diff-so-fancy"
 brew "expect"
-{{- if .work }}
-brew "gh"
-{{- end }}
 brew "git-lfs"
 brew "python@3.9"
 brew "python@3.10"
-{{- if .work }}
-brew "hs-kubectl"
-{{- end }}
 brew "httpie"
 brew "mas"
 brew "maven"
 brew "mono"
 brew "nghttp2"
 brew "node"
-{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 brew "openjdk"
-{{- end }}
-{{- if .work }}
-brew "percona-server"
-{{- end }}
 brew "rename"
 brew "ripgrep"
 brew "tldr"
 brew "wget"
 brew "zsh"
-{{- if .work }}
-brew "hubspot/main/bender-proxy"
-brew "hubspot/main/hshs"
-brew "hubspot/main/bend"
-brew "hubspot/main/deploy-config-validator"
-brew "hubspot/main/hsenv"
-brew "hubspot/main/httpie-hubspot"
-brew "hubspot/main/japi-check"
-brew "hubspot/main/java-gen"
-brew "hubspot/main/mothership"
-brew "hubspot/main/mvndiff"
-brew "hubspot/main/nex"
-{{- end }}
 cask "alfred"
+{{- if (eq .chezmoi.hostname "nate-mbp-max") }}
+cask "authy"
+{{- end }}
 cask "bartender"
 cask "bitwarden"
 cask "bluesnooze"
@@ -56,9 +31,6 @@ cask "boop"
 cask "brave-browser"
 cask "caffeine"
 cask "calibre"
-{{- if .work }}
-cask "ccmenu"
-{{- end }}
 cask "discord"
 {{- if (and .personal (not (eq .chezmoi.hostname "nate-mba"))) }}
 cask "unity-hub"
@@ -71,22 +43,11 @@ cask "finicky"
 {{- end }}
 cask "freedom"
 cask "google-drive"
-{{- if .work }}
-cask "hs-java11"
-cask "hs-java17"
-{{- end }}
 cask "iterm2"
 cask "itsycal"
-{{- if .work }}
-cask "java8"
-{{- end }}
-{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 cask "jetbrains-toolbox"
-{{- end }}
 cask "keka"
-{{- if (not (eq .chezmoi.hostname "nate-mba")) }}
 cask "mat"
-{{- end }}
 cask "nordvpn"
 cask "notunes"
 cask "obsidian"
@@ -100,9 +61,7 @@ cask "tidal"
 cask "todoist"
 cask "unity-hub"
 cask "vlc"
-{{- if .personal }}
 cask "zoom"
-{{- end }}
 mas "GIPHY CAPTURE", id: 668208984
 mas "Hour", id: 569089415
 mas "Keynote", id: 409183694
