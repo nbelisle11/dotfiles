@@ -3,7 +3,7 @@ This repo uses [chezmoi](https://chezmoi.io/) to manage dotfiles and configs acr
 
 Check out [here](https://dotfiles.github.io/inspiration/) for more dotfiles inspiration
 
-# Initialize a new MacOS machine
+## Initialize a new MacOS machine
 1. Login to AppStore using Apple ID
 
 2. Install homebrew and chezmoi
