@@ -2,30 +2,18 @@
 
 #Login to AppStore using Apple ID
 
-#Install homebrew
+#Install homebrew and chezmoi
 ```
+sudo xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+PATH="/usr/local/bin:$PATH"
+brew install chezmoi
 ```
-
-#Setup Iterm, oh-my-zsh, and dotfiles
-```
-/opt/homebrew/bin/brew install --cask iterm2
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-/opt/homebrew/bin/brew install chezmoi
-/opt/homebrew/bin/brew install git-lfs
-/opt/homebrew/bin/brew install --cask sublime-text
-/opt/homebrew/bin/brew install --cask brave-browser
-```
-
-#Setup brave with last pass
-#log into github
-#[Setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 #Edit dotfiles
-#find chezmoi install directory and prefix the following commands with the latest `bin` folder. Examples assume version 2.29.4
-#get chezmoi environment variables, edit dotfile templates with new hostname
+#Get chezmoi environment variables, edit dotfile templates with new hostname as needed
 ```
-/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi data
+chezmoi data
 ```
 
 #Initialize chezmoi
@@ -33,24 +21,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chezmoi init git@github.com:nbelisle11/dotfiles.git
 ```
 
-#Get the chezmoi config directory from chezmoi data and apply the chezmoi config before applying the rest of the repo
-```
-/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi diff ~/.config/chezmoi/chezmoi.toml
-/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi apply ~/.config/chezmoi/chezmoi.toml
-```
-
-#Apply the rest of the chezmoi repo
-```
-/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi diff
-/opt/homebrew/Cellar/chezmoi/2.29.4/bin/chezmoi apply
-```
-
-#Clone Machine Config and configure iterm
-
 #Install remaining apps
 ```
-brew bundle
+brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ```
+
+#[Setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+```
+ssh-keygen -t ed25519 -C <email> -f ~/.ssh/github_ed25519
+```
+
+#Clone Machine Config and configure iterm, alfred, etc.
+
 
 
 
@@ -65,11 +47,6 @@ Add IntelliJ plugins
 Setup and launch `login items`
 Configure ccmenu using [command line configuration](https://ccmenu.org/) by running command in `machine-config/preferences/ccmenu`
 [Import Sequel Ace Preferences](http://stackoverflow.com/a/37145386)
-
-#Passwords
-```
-security add-generic-password -a nbelisle -s Janus -w
-```
 
 #Apple Flags
 ```
