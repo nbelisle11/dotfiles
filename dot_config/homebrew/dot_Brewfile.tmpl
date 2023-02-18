@@ -21,7 +21,7 @@ brew "tldr"
 brew "wget"
 brew "zsh"
 cask "alfred"
-{{- if (eq .chezmoi.hostname "nate-mbp-max") }}
+{{- if (eq .hostname "nate-mbp-max") }}
 cask "authy"
 {{- end }}
 cask "bartender"
@@ -32,7 +32,7 @@ cask "brave-browser"
 cask "caffeine"
 cask "calibre"
 cask "discord"
-{{- if (and .personal (not (eq .chezmoi.hostname "nate-mba"))) }}
+{{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "unity-hub"
 {{- end }}
 cask "zoom"
