@@ -7,9 +7,9 @@
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
-{{-   if eq $computerName "Nate's MacBook Air" -}}
+{{-   if eq $computerName "Nate’s MacBook Air" -}}
 {{-     $hostname = "nate-mba" -}}
-{{-   else if eq $computerName "Nate's MacBook Pro" -}}
+{{-   else if eq $computerName "Nate’s MacBook Pro" -}}
 {{-     $hostname = "nate-mbp-max" -}}
 {{-   else -}}
 {{-     $hostname = $computerName -}}
