@@ -37,11 +37,16 @@ brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ssh-keygen -t ed25519 -C <email> -f ~/.ssh/github_ed25519
 ```
 
+6. Initialize mac config via
+```
+~/.macos
+```
+
 7. Clone Machine Config repo and configure iterm, alfred, etc.
 
 #### Preferences / Config
 
-Manual System Settings Config
+1. Configure `System Settings` that need to be manual 
 - Set `Keyboard -> Keyboard Shortcuts... -> Accessibility -> Invert Colors` to Command - Q
 - Unset all  `Keyboard -> Keyboard Shortcuts... -> Screenshots` (Use Skitch Instead)
 - Set `General -> Login Items -> Open at Login` to include
@@ -70,16 +75,9 @@ Manual System Settings Config
 
 4. Add IntelliJ plugins
 
-5. Setup and launch `login items`
-
 6. Configure ccmenu using [command line configuration](https://ccmenu.org/) by running command in `machine-config/preferences/ccmenu`
 
 7. [Import Sequel Ace Preferences](http://stackoverflow.com/a/37145386)
-
-8. Set Apple Flags
-```
-defaults write com.apple.finder AppleShowAllFiles YES
-```
 
 9. Configure nas connection to Ravenstore
 #Finder->Go->Connect to Server
