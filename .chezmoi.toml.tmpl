@@ -27,7 +27,7 @@
 
 
 {{- $userEmail := promptStringOnce . "email" "Computer Email address" -}}
-{{- $personalEmail := promptStringOnce . "personal.email" "Personal Email address" -}}
+{{- $personalEmail := promptStringOnce . "personalEmail" "Personal Email address" -}}
 
 [data]
     hostname = {{ $hostname | quote }}
