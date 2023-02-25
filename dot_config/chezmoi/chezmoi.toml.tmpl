@@ -25,10 +25,16 @@
 {{-   $personal = true -}}
 {{ end }}
 
+
+{{- $userEmail := promptStringOnce . "email" "Computer Email address" -}}
+{{- $personalEmail := promptStringOnce . "personal.email" "Personal Email address" -}}
+
 [data]
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
     work = {{ $work }}
+    email = {{ $userEmail | quote }}
+    personalEmail = {{ $personalEmail | quote }}
 [edit]
 {{- if lookPath "diff-so-fancy" }}
     command = "subl"
