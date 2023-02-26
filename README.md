@@ -32,17 +32,20 @@ chezmoi init git@github.com:nbelisle11/dotfiles.git
 brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ```
 
-6. [Setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-```
-ssh-keygen -t ed25519 -C <email> -f ~/.ssh/github_ed25519
-```
-
 6. Initialize mac config via
 ```
 ~/.macos
 ```
 
-7. Clone Machine Config repo and configure iterm, alfred, etc.
+7. Setup github and gitlab ssh
+```
+.~/scripts/githubSshCreate.sh
+```
+```
+.~/scripts/gitlabSshCreate.sh
+```
+
+8. Clone Machine Config repo and configure iterm, alfred, etc.
 
 #### Preferences / Config
 

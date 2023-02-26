@@ -7,7 +7,8 @@ set -e
 shopt -s expand_aliases
 source ~/.bashrc
 
-fullPathToSsh=`sshCreate github` | tail -1
+output= sshCreate github || exit $?
+fullPathToSsh=$output | tail -1
 
 eval "$(ssh-agent -s)"
 
