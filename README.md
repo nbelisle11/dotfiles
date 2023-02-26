@@ -16,36 +16,44 @@ PATH="/usr/local/bin:$PATH"
 brew install chezmoi
 ```
 
-3. Edit dotfiles variables and brewfile for new machine
-#Get chezmoi environment variables, edit dotfile templates with new hostname as needed
+3. Get chezmoi environment variables, get new machine hostname, then edit dotfile templates with new hostname as needed
 ```
 chezmoi data
+scutil --get ComputerName
 ```
 
-4. Initialize chezmoi
+4. Initialize chezmoi and validate config is as expected
 ```
-chezmoi init git@github.com:nbelisle11/dotfiles.git
+chezmoi init nbelisle11
+chezmoi cat-config
 ```
 
-5. Install remaining apps
+5. Get latest chezmoi changes and run apply
+```
+chezmoi update
+```
+
+6. Install remaining apps (should happen as part of the previous step)
 ```
 brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ```
 
-6. Initialize mac config via
+7. Setup github and gitlab ssh
+```
+~/scripts/githubSshCreate.sh
+```
+```
+~/scripts/gitlabSshCreate.sh
+```
+
+8. Update `machine-config/srcinit`, clone `machine-config` repo and other repos from srcinit
+
+9. Initialize mac config via
 ```
 ~/.macos
 ```
 
-7. Setup github and gitlab ssh
-```
-.~/scripts/githubSshCreate.sh
-```
-```
-.~/scripts/gitlabSshCreate.sh
-```
-
-8. Clone Machine Config repo and configure iterm, alfred, etc.
+10. Configure remaining manual items, iterm, alfred, etc from below
 
 #### Preferences / Config
 
