@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Let me call aliases
+shopt -s expand_aliases
+source ~/.bashrc
+
+if [ "$#" -lt 1 ]; then
+    echo "Illegal number of parameters, must be greater than 1"
+    exit -1
+fi
+
+
+filename=`echo "$@" | sed 's/[][]//g' | sed 's/[ <>\"]/-/g'`
+fullFilename=`echo ~/.ssh/${filename}_ed25519`
+hostname=`echo "{{ .hostname }}"`
+bitwardenItemName=${hostname}-${fullFilename}
+
+bw logout &> /dev/null
+
+echo "Logging into BitWarden"
+bwSessionKey=`bw login {{ .personalEmail }} --raw`
+sshPassword=`bw generate -ulns --length 32`
+
+echo "Generating ssh files at ${fullFilename}"
+ssh-keygen -t ed25519 -C {{ .email }} -P $sshPassword -f $fullFilename
+
+echo "Storing ssh file passphrase in Bitwarden at ${bitwardenItemName}"
+loginJson=`bw get template item.login --session $bwSessionKey | jq -r ".username=\"{{ .personalEmail }}\" | .password=\"$sshPassword\" | .totp=null"`
+bw get template item --session $bwSessionKey | jq ".name=\"$bitwardenItemName\" | .login=$loginJson" | bw encode --session $bwSessionKey | bw create item --session $bwSessionKey 1> /dev/null
+
+echo "Logging out of BitWarden"
+bw logout
+
+echo $fullFilename
