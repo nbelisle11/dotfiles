@@ -6,7 +6,9 @@ brew "bitwarden-cli"
 brew "chezmoi"
 brew "diff-so-fancy"
 brew "expect"
+{{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 brew "git-lfs"
+{{- end }}
 brew "jq"
 brew "python@3.9"
 brew "python@3.10"
@@ -36,11 +38,8 @@ cask "caffeine"
 cask "calibre"
 cask "discord"
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
-cask "unity-hub"
-{{- end }}
-cask "zoom"
 cask "dotnet-sdk"
-cask "dropbox"
+{{- end }}
 {{- if .work }}
 cask "finicky"
 {{- end }}
@@ -62,7 +61,9 @@ cask "steam"
 cask "sublime-text"
 cask "tidal"
 cask "todoist"
+{{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "unity-hub"
+{{- end }}
 cask "vlc"
 cask "zoom"
 mas "GIPHY CAPTURE", id: 668208984
