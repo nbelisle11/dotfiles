@@ -38,7 +38,7 @@ chezmoi update
 brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ```
 
-7. Setup github and gitlab ssh
+7. Setup [github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and gitlab ssh
 ```
 ~/scripts/githubSshCreate.sh
 ```
