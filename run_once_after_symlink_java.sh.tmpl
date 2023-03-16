@@ -1,4 +1,8 @@
 #!/bin/bash
 
 echo "Symlinking java requires sudo password" #https://stackoverflow.com/questions/65601196/how-to-brew-install-java#answer-65601197
+{{- if eq .chezmoi.arch "arm64" }}
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+{{- else if eq .chezmoi.arch "amd64" }}
+sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+{{- end }}
