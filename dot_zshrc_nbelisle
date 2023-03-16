@@ -115,4 +115,4 @@ setopt complete_aliases
 MAILCHECK=0
 
 # Use Java 11
-export JAVA_HOME=$(/usr/bin/java)
+export JAVA_HOME="/usr/bin/java"
