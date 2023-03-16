@@ -46,14 +46,20 @@ brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 ~/scripts/gitlabSshCreate.sh
 ```
 
-8. Update `machine-config/srcinit`, clone `machine-config` repo and other repos from srcinit
+8. Migrate chezmoi to use ssh
+```
+chezmoi cd
+git remote set-url origin git@github.com:nbelisle11/dotfiles.git
+```
 
-9. Initialize mac config via
+9. Update `machine-config/srcinit`, clone `machine-config` repo and other repos from srcinit
+
+10. Initialize mac config via
 ```
 ~/.macos
 ```
 
-10. Configure remaining manual items, iterm, alfred, etc from below
+11. Configure remaining manual items, iterm, alfred, etc from below
 
 #### Preferences / Config
 
