@@ -1,38 +1,37 @@
-*~
-*.swp
-*.orig
-*.iml
-*.iws
-.DS_Store
-.run/Template*
+*~             # ignore files ending with a tilde (~)
+*.swp          # ignore swap files
+*.orig         # ignore backup files
+.DS_Store      # ignore macOS Finder metadata files
+.run/Template* # ignore files in the .run/ directory that start with "Template"
 
 # Python artifacts
-*.pyc
-*.egg-info
-.pydevproject
+*.pyc          # ignore compiled Python files
+*.egg-info     # ignore Python package metadata files
+.pydevproject  # ignore PyDev project files
 
 # Frontend
-node_modules/
-npm-debug.log
-yarn-error.log
+node_modules/  	# ignore Node.js modules directory
+npm-debug.log 	# ignore NPM debug log file
+yarn-error.log 	# ignore Yarn error log file
 
 # Generated files
-bin/
-target/
+bin/           # ignore generated binary files
+target/        # ignore generated output files
 
 # VSCode files
-.vscode/
+.vscode/       # ignore VS Code project files
 
 # Eclipse files
-.classpath
-.project
-.settings
-.factorypath
-.checkstyle
-target-eclipse
+.classpath     # ignore Eclipse classpath file
+.project       # ignore Eclipse project file
+.settings/     # ignore Eclipse settings directory
+.factorypath   # ignore Eclipse factorypath file
+.checkstyle    # ignore Eclipse Checkstyle configuration file
+target-eclipse # ignore Eclipse target directory
 
 # IntelliJ files
-**/.idea/*
-!.idea/runConfigurations
-*.iml
-.gradle-enterprise/
+**/.idea/*     				# ignore IntelliJ IDEA project files
+!.idea/runConfigurations 	# but do include run configurations
+*.iml          				# ignore IntelliJ IDEA module files
+*.iws          				# ignore IntelliJ IDEA workspace files
+.gradle-enterprise/ 		# ignore Gradle Enterprise cache directory

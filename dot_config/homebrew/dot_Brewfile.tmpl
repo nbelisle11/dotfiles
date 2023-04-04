@@ -1,73 +1,82 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
-brew "bitwarden-cli"
-brew "chezmoi"
-brew "diff-so-fancy"
-brew "expect"
-brew "git-lfs"
-brew "jq"
-brew "python@3.9"
-brew "python@3.10"
-brew "httpie"
-brew "mas"
-brew "maven"
-brew "mono"
-brew "nghttp2"
-brew "node"
-brew "openjdk"
-brew "rename"
-brew "ripgrep"
-brew "tldr"
-brew "wget"
-brew "zsh"
-cask "alfred"
+# Add Homebrew taps for managing packages and applications
+tap "homebrew/bundle"    		# Allows managing multiple packages and applications with a single Brewfile
+tap "homebrew/cask"      		# Allows installing GUI applications with Homebrew
+tap "homebrew/core"      		# Contains thousands of open-source packages for macOS
+tap "homebrew/services"  		# Allows managing system services with Homebrew
+
+# Install command-line tools and libraries
+brew "bitwarden-cli"     		# A command-line interface for the Bitwarden password manager
+brew "chezmoi"           		# A tool for managing dotfiles
+brew "diff-so-fancy"     		# A tool for improving the output of Git diffs
+brew "expect"            		# A tool for automating interactive applications
+brew "git-lfs"           		# A Git extension for managing large files
+brew "jq"                		# A tool for processing JSON data
+brew "python@3.9"        		# Install Python 3.9
+brew "python@3.10"       		# Install Python 3.10
+brew "httpie"            		# A command-line HTTP client
+brew "mas"               		# A command-line interface for the Mac App Store
+
+# Install libraries and frameworks
+brew "maven"             		# A build automation tool for Java projects
+brew "mono"              		# An open-source implementation of Microsoft .NET Framework
+brew "nghttp2"           		# A library for HTTP/2 and HPACK
+brew "node"              		# A JavaScript runtime built on Chrome's V8 JavaScript engine
+brew "openjdk"           		# An open-source implementation of the Java SE platform
+brew "ripgrep"           		# A line-oriented search tool that recursively searches directories
+brew "tldr"              		# A collection of simplified and community-driven man pages
+brew "wget"              		# A command-line tool for downloading files from the web
+brew "zsh"               		# A shell with interactive features and syntax highlighting
+
+# Install GUI applications
+cask "alfred"            		# A productivity application for macOS
 {{- if (eq .hostname "nate-mbp-max") }}
-cask "authy"
+cask "authy"             		# A two-factor authentication application
 {{- end }}
-cask "bartender"
-cask "bbedit"
-cask "bitwarden"
-cask "bluesnooze"
-cask "boop"
-cask "brave-browser"
-cask "caffeine"
-cask "calibre"
-cask "discord"
+cask "bartender"         		# A tool for managing menu bar items on macOS
+cask "bbedit"            		# A professional text editor for macOS
+cask "bitwarden"         		# A password manager with a GUI client
+cask "bluesnooze"        		# An application for reducing blue light on macOS
+cask "boop"              		# A scriptable scratchpad for developers
+cask "brave-browser"     		# A privacy-focused web browser
+cask "caffeine"          		# An application that prevents macOS from going to sleep
+cask "calibre"             		# E-book manager and reader
+cask "discord"             		# Chat and voice app for gamers
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
-cask "dotnet-sdk"
+cask "dotnet-sdk"          		# Software development kit for .NET Framework
 {{- end }}
 {{- if .work }}
-cask "finicky"
+cask "finicky"          		# Application for customizing URLs to open in specific browsers
 {{- end }}
-cask "freedom"
-cask "google-drive"
-cask "iterm2"
-cask "itsycal"
-cask "jetbrains-toolbox"
-cask "keka"
-cask "mat"
-cask "nordvpn"
-cask "notunes"
-cask "obsidian"
-cask "qbittorrent"
-cask "sequel-ace"
-cask "signal"
-cask "slack"
-cask "steam"
-cask "sublime-text"
-cask "tidal"
-cask "todoist"
+cask "freedom"          		# App for blocking distractions and increasing productivity
+cask "google-drive"     		# Cloud storage and file backup app
+cask "iterm2"           		# Terminal emulator for macOS
+cask "itsycal"          		# Calendar app for macOS
+cask "jetbrains-toolbox" 		# JetBrains Toolbox, an installer and manager for JetBrains IDEs
+cask "keka"             		# Compression and decompression app for macOS
+cask "mat"              		# macOS app for monitoring and analyzing network traffic
+cask "nordvpn"          		# Virtual private network (VPN) app for macOS
+cask "notunes"          		# App for disabling iTunes launching when a media key is pressed
+cask "obsidian"         		# Knowledge management and note-taking app
+cask "qbittorrent"      		# BitTorrent client app for macOS
+cask "sequel-ace"       		# SQLite database manager app for macOS
+cask "signal"           		# Encrypted messaging and calling app
+cask "slack"            		# Team communication and collaboration app
+cask "steam"            		# Digital distribution platform for video games
+cask "sublime-text"     		# Text editor for macOS
+cask "tidal"            		# Music streaming service app
+cask "todoist"          		# App for managing tasks and to-do lists
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
-cask "unity-hub"
+cask "unity-hub"        		# Unity engine hub for managing different versions of the engine
 {{- end }}
-cask "vlc"
-cask "zoom"
-mas "GIPHY CAPTURE", id: 668208984
-mas "Hour", id: 569089415
-mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
-mas "Meeter", id: 1510445899
-mas "Skitch", id: 425955336
-mas "Timestamp Converter", id: 738226999
+cask "visual-paradigm-ce" 		# UML diagramming and design tool
+cask "vlc"              		# Multimedia player app for macOS
+cask "zoom"             		# Video conferencing app for macOS
+
+# Install Mac App Store applications
+mas "GIPHY CAPTURE", id: 668208984   		# GIF and video screen capture app from the Mac App Store
+mas "Hour", id: 569089415            		# Time tracking app from the Mac App Store
+mas "Keynote", id: 409183694         		# Presentation software from the Mac App Store
+mas "Magnet", id: 441258766          		# Window manager app from the Mac App Store
+mas "Meeter", id: 1510445899         		# Video conferencing app from the Mac App Store
+mas "Skitch", id: 425955336          		# Annotation and markup app from the Mac App Store
+mas "Timestamp Converter", id: 738226999 	# Date and time converter app from the Mac App Store
