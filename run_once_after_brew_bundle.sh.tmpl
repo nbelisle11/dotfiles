@@ -6,8 +6,8 @@ diff -u ~/.config/homebrew/.Brewfile.old ~/.config/homebrew/.Brewfile | diff-so-
 read -r -p "Would you like to apply changes? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	echo "Applying brew bundle"
-	brew bundle --verbose --file=~/.config/homebrew/.Brewfile
+    echo "Applying brew bundle"
+    brew bundle --verbose --file=~/.config/homebrew/.Brewfile
 else
     echo "Skipping brew bundle"
 fi

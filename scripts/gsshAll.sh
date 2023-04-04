@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Script to iterate through all directories in ~/src and 
+# build the scp-like syntax used in git clone for any git repositories
+
+# Let me call aliases
 shopt -s expand_aliases
 source ~/.bashrc
 
