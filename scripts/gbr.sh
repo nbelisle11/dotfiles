@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# The script takes a parameter for a new branch name / commit message and creates 
+# This script takes a parameter for a new branch name / commit message and creates 
 # a new kebab cased branch name with the current user name, current date, and input parameter. 
 # It then stashes all local changes, pulls changes from the master branch, creates a new branch with the generated name, 
 # applies all the stashed changes, and push commits the changes with the original parameter string as the commit message.

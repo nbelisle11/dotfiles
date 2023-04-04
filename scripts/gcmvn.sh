@@ -29,5 +29,5 @@ git fetch origin
 # Pull changes from the remote main branch into the local main branch
 git pull origin $mainBranchName
 
-# Run the "mvncc" script to clean, compile, and package the Maven project
+# Run the "mvncc" script to clean and compile the Maven project
 mvncc

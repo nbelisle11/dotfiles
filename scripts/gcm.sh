@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this script automates the process of checking out the main branch, 
+# This script automates the process of checking out the main branch, 
 # fetching updates, and pulling changes for each Git repository in the current directory.
 
 # Let me call aliases

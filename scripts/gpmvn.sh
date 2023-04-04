@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script automates the process of pulling the latest changes from a 
+# Git repository and compiling and installing the project using Maven
+
 # Let me call aliases
 shopt -s expand_aliases
 source ~/.bashrc

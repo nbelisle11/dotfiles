@@ -11,12 +11,11 @@ if [ $# != 0 ]; then
   repo="-C $1"
 fi
 
-# This block checks if the current Git repository has a HEAD reference
-# If there is no HEAD reference, it assumes the default branch is "master"
+# Checks if the current Git repository has a HEAD reference
 git $repo rev-parse --abbrev-ref HEAD &> /dev/null
 RESULT=$?
 if [ $RESULT != 0 ]; then
-  # If there is no HEAD reference, the `gmb` command is executed
+  # If there is no HEAD reference, fetch main branch name from origin using gmb
   echo `gmb`
   exit
 fi

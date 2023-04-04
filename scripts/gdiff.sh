@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This script conducts a git diff on each subdirectory in the current directory.
+
 localPATH=`pwd`                          # set the path of the current directory to localPATH variable
 sep='---------------'                    # create a separator variable for formatting
 
