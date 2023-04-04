@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# This script generates a new ed25519 ssh key pair, saves the private key with a passphrase in ~/.ssh, 
+# The script also logs into Bitwarden using the chezmoi configured personal email address, generates a 
+# random password for the ssh key, and stores the passphrase in Bitwarden with the hostname and full filename as the name.
+
 # Fail on any error
 set -e
 
@@ -7,31 +11,48 @@ set -e
 shopt -s expand_aliases
 source ~/.bashrc
 
+# Check that the script was called with at least one argument
 if [ "$#" -lt 1 ]; then
     echo "Illegal number of parameters, must be greater than 1"
     exit -1
 fi
 
-
+# Clean up the filename by removing brackets, angle brackets, quotes and spaces
 filename=`echo "$@" | sed 's/[][]//g' | sed 's/[ <>\"]/-/g'`
+
+# Set the full filename including the path to the ssh key
 fullFilename=`echo ~/.ssh/${filename}_ed25519`
+
+# Set the hostname and Bitwarden item name
 hostname=`echo "{{ .hostname }}"`
 bitwardenItemName=${hostname}-${fullFilename}
 
+# Log out of Bitwarden to avoid session conflicts
 bw logout &> /dev/null
 
 echo "Logging into BitWarden"
+
+# Log into Bitwarden using the personal email address and save the session key
 bwSessionKey=`bw login {{ .personalEmail }} --raw`
+
+# Generate a random password for the ssh key
 sshPassword=`bw generate -ulns --length 32`
 
 echo "Generating ssh files at ${fullFilename}"
+
+# Generate a new ed25519 ssh key pair with the given password
 ssh-keygen -t ed25519 -C {{ .email }} -P $sshPassword -f $fullFilename
 
 echo "Storing ssh file passphrase in Bitwarden at ${bitwardenItemName}"
+
+# Create a new Bitwarden item with the hostname, filename and ssh password as the login credentials
 loginJson=`bw get template item.login --session $bwSessionKey | jq -r ".username=\"{{ .personalEmail }}\" | .password=\"$sshPassword\" | .totp=null"`
 bw get template item --session $bwSessionKey | jq ".name=\"$bitwardenItemName\" | .login=$loginJson" | bw encode --session $bwSessionKey | bw create item --session $bwSessionKey 1> /dev/null
 
 echo "Logging out of BitWarden"
+
+# Log out of Bitwarden to end the session
 bw logout
 
+# Print the full filename of the ssh key
 echo $fullFilename

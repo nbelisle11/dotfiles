@@ -1,9 +1,9 @@
 Host *github.com
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/github_ed25519
+  AddKeysToAgent yes                  # Add the SSH key to the ssh-agent when connecting to github.com
+  UseKeychain yes                     # Have ssh use the macOS Keychain to store the SSH key passphrase
+  IdentityFile ~/.ssh/github_ed25519  # Location of your SSH key for github.com
 
 Host *gitlab.com
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/gitlab_ed25519
+  AddKeysToAgent yes                  # Add the SSH key to the ssh-agent when connecting to github.com
+  UseKeychain yes                     # Have ssh use the macOS Keychain to store the SSH key passphrase
+  IdentityFile ~/.ssh/gitlab_ed25519  # Location of your SSH key for github.com

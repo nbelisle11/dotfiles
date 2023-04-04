@@ -1,11 +1,25 @@
+# Sets the PS1 environment variable to customize the command prompt
+# \u - username
+# \h - hostname
+# \w - current working directory
+# Colors the prompt with ANSI escape codes
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+
+# Enables colored output for the ls command
 export CLICOLOR=1
+# Specifies color schemes for the ls command (ExFxBxDxCxegedabagacad)
 export LSCOLORS=ExFxBxDxCxegedabagacad
+# Creates an alias for the ls command with the following options:
+# -G - enables colored output
+# -F - appends file type indicators to filenames
+# -h - makes file sizes human-readable
 alias ls='ls -GFh'
 
+# Checks if bash completion scripts are installed via Homebrew
 if [ -f `brew --prefix`/etc/bash_completion ]; then
+    # If so, sources the scripts to enable bash completion
     . `brew --prefix`/etc/bash_completion
 fi
 
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Loads the RVM (Ruby Version Manager) script as a shell function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
