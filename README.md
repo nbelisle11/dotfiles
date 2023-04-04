@@ -67,24 +67,24 @@ git remote set-url origin git@github.com:nbelisle11/dotfiles.git
 - Set `Keyboard -> Keyboard Shortcuts... -> Accessibility -> Invert Colors` to Command - Q
 - Unset all  `Keyboard -> Keyboard Shortcuts... -> Screenshots` (Use Skitch Instead)
 - Set `General -> Login Items -> Open at Login` to include
-	- Alfred
-	- Bartender
-	- Bluesnooze
-	- Caffeine
-	- Google Drive
-	- Hour
-	- Itsycal
-	- Jetbrains Toolbox
-	- NordVPN
-	- noTunes
-	- Skitch
-	- TimestampConverter
+  - Alfred
+  - Bartender
+  - Bluesnooze
+  - Caffeine
+  - Google Drive
+  - Hour
+  - Itsycal
+  - Jetbrains Toolbox
+  - NordVPN
+  - noTunes
+  - Skitch
+  - TimestampConverter
 - Set `General -> Login Items -> Allow in the Background` to include
-	- Bartender
-	- Google Updater
-	- Jetbrains
-	- NordVPN
-	- Skitch
+  - Bartender
+  - Google Updater
+  - Jetbrains
+  - NordVPN
+  - Skitch
 
 2. Install Alfed powerpack from lifetime license in email "Your Alfred 5 Powerpack order"
 
@@ -99,4 +99,4 @@ git remote set-url origin git@github.com:nbelisle11/dotfiles.git
 9. Configure nas connection to Ravenstore
 #Finder->Go->Connect to Server
 afp://192.168.1.32
-#u/p from Lastpass
+#u/p from BitWarden

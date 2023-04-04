@@ -10,9 +10,9 @@
 .pydevproject  # ignore PyDev project files
 
 # Frontend
-node_modules/  	# ignore Node.js modules directory
-npm-debug.log 	# ignore NPM debug log file
-yarn-error.log 	# ignore Yarn error log file
+node_modules/   # ignore Node.js modules directory
+npm-debug.log   # ignore NPM debug log file
+yarn-error.log  # ignore Yarn error log file
 
 # Generated files
 bin/           # ignore generated binary files
@@ -30,8 +30,8 @@ target/        # ignore generated output files
 target-eclipse # ignore Eclipse target directory
 
 # IntelliJ files
-**/.idea/*     				# ignore IntelliJ IDEA project files
-!.idea/runConfigurations 	# but do include run configurations
-*.iml          				# ignore IntelliJ IDEA module files
-*.iws          				# ignore IntelliJ IDEA workspace files
-.gradle-enterprise/ 		# ignore Gradle Enterprise cache directory
+**/.idea/*                  # ignore IntelliJ IDEA project files
+!.idea/runConfigurations    # but do include run configurations
+*.iml                       # ignore IntelliJ IDEA module files
+*.iws                       # ignore IntelliJ IDEA workspace files
+.gradle-enterprise/         # ignore Gradle Enterprise cache directory

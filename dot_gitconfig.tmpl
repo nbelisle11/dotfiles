@@ -1,23 +1,23 @@
 [user]
-	name = Nate Belisle
-	email = {{ .email }}
+  name = Nate Belisle
+  email = {{ .email }}
 [core]
-	hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
-	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	filemode = false
-	editor = vim
+  hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
+  excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  filemode = false
+  editor = vim
 {{- if .work }}
-	sshCommand = bash {{ .chezmoi.homeDir }}/scripts/sshc.sh
+  sshCommand = bash {{ .chezmoi.homeDir }}/scripts/sshc.sh
 {{- end }}
 [remote "origin"]
-	prune = true
+  prune = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [pull]
-	rebase = false
+  rebase = false
 [pager]
-	branch = false
+  branch = false
