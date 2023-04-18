@@ -115,4 +115,8 @@ setopt complete_aliases
 MAILCHECK=0
 
 # Set JAVA_HOME
+{{- if (eq .hostname "nate-mba") }}
 export JAVA_HOME="/usr/bin/java"
+{{- else }}
+export JAVA_HOME=$(/usr/libexec/java_home)
+{{- end }}
