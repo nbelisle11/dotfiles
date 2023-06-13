@@ -118,7 +118,7 @@ MAILCHECK=0
 {{- if (eq .hostname "nate-mba") }}
 export JAVA_HOME="/usr/bin/java"
 {{- else }}
-export JAVA_HOME="/usr/libexec/java_home"
+export JAVA_HOME=$(/usr/libexec/java_home)
 {{- end }}
 
 # Add JAVA_HOME to PATH
