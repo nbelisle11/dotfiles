@@ -28,7 +28,7 @@ hostname=`echo "{{ .hostname }}"`
 bitwardenItemName=${hostname}-${fullFilename}
 
 # Log out of Bitwarden to avoid session conflicts
-bw logout &> /dev/null || true
+bw logout &> /dev/null || true 
 
 echo "Logging into BitWarden"
 
