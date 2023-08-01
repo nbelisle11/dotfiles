@@ -1,13 +1,13 @@
 {{/* boolean feature tags */}}
 {{- $personal := false -}}{{/* true if this machine is for personal use */}}
 {{- $work := false -}}{{/* true if this machine belongs to my employer */}}
-{{- $serialNumber := "NONE" -}}
 {{- "" -}}
 
 {{/* work around unreliable hostname on darwin - https://github.com/twpayne/chezmoi/issues/1802 */}}
+{{- $serial := "NONE" -}}
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "darwin" -}}
-{{-   $serialNumber := index ioreg "IORegistryEntryChildren" 0 "IOPlatformSerialNumber" -}}
+{{-   $serial = index ioreg "IORegistryEntryChildren" 0 "IOPlatformSerialNumber" -}}
 {{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
 {{-   if eq $computerName "Nate’s MacBook Air" -}}
 {{-     $hostname = "nate-mba" -}}
@@ -21,7 +21,7 @@
 {{- end -}}
 
 
-{{- if (and (eq .chezmoi.os "darwin") (or (eq $hostname "C02G3015MD6V") (hasPrefix "YHJ" $serialNumber))) }}
+{{- if (and (eq .chezmoi.os "darwin") (or (eq $hostname "C02G3015MD6V") (hasPrefix "YHJ" $serial))) }}
 {{-   $work = true -}}
 {{-   $personal = false -}}
 {{ else }}
@@ -33,13 +33,14 @@
 {{- $userEmail := promptStringOnce . "email" "Computer Email address" -}}
 {{- $personalEmail := promptStringOnce . "personalEmail" "Personal Email address" -}}
 
+
 [data]
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
     work = {{ $work }}
     email = {{ $userEmail | quote }}
     personalEmail = {{ $personalEmail | quote }}
-    serialNumber = {{ $serialNumber | quote }}
+    serial = {{ $serial | quote }}
 [edit]
 {{- if lookPath "subl" }}
     command = "subl"
