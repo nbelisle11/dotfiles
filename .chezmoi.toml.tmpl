@@ -39,8 +39,9 @@
     work = {{ $work }}
     email = {{ $userEmail | quote }}
     personalEmail = {{ $personalEmail | quote }}
+    serialNumber = {{ $serialNumber | quote }}
 [edit]
-{{- if lookPath "diff-so-fancy" }}
+{{- if lookPath "subl" }}
     command = "subl"
 {{- end }}
     args = ["--wait"]
