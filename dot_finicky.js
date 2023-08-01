@@ -11,6 +11,7 @@ module.exports = {
     {
       // Use chrome for work specific stuff
       match: [
+        "*dutchie.atlassian.net/*", // Atlassian
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
