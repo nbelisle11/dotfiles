@@ -1,23 +1,27 @@
 {{/* boolean feature tags */}}
 {{- $personal := false -}}{{/* true if this machine is for personal use */}}
 {{- $work := false -}}{{/* true if this machine belongs to my employer */}}
+{{- $serialNumber := "NONE" -}}
 {{- "" -}}
 
 {{/* work around unreliable hostname on darwin - https://github.com/twpayne/chezmoi/issues/1802 */}}
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "darwin" -}}
+{{-   $serialNumber := index ioreg "IORegistryEntryChildren" 0 "IOPlatformSerialNumber" -}}
 {{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
 {{-   if eq $computerName "Nate’s MacBook Air" -}}
 {{-     $hostname = "nate-mba" -}}
 {{-   else if eq $computerName "Nate’s MacBook Pro" -}}
 {{-     $hostname = "nate-mbp-max" -}}
+{{-   else if eq $computerName "Nathan’s MacBook Pro" -}}
+{{-     $hostname = "nate-mbp-work" -}}
 {{-   else -}}
 {{-     $hostname = $computerName -}}
 {{-   end -}}
 {{- end -}}
 
 
-{{- if (and (eq .chezmoi.os "darwin") (or (eq $hostname "C02G3015MD6V") (eq $hostname "F5QH0HDQFC"))) }}
+{{- if (and (eq .chezmoi.os "darwin") (or (eq $hostname "C02G3015MD6V") (hasPrefix "YHJ" $serialNumber))) }}
 {{-   $work = true -}}
 {{-   $personal = false -}}
 {{ else }}

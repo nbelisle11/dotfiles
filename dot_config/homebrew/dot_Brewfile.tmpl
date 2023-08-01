@@ -38,8 +38,10 @@ cask "bluesnooze"             # An application for reducing blue light on macOS
 cask "boop"                   # A scriptable scratchpad for developers
 cask "brave-browser"          # A privacy-focused web browser
 cask "caffeine"               # An application that prevents macOS from going to sleep
+{{- if .personal }}
 cask "calibre"                # E-book manager and reader
 cask "discord"                # Chat and voice app for gamers
+{{- end }}
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "dotnet-sdk"             # Software development kit for .NET Framework
 {{- end }}
@@ -52,18 +54,24 @@ cask "iterm2"                 # Terminal emulator for macOS
 cask "itsycal"                # Calendar app for macOS
 cask "jetbrains-toolbox"      # JetBrains Toolbox, an installer and manager for JetBrains IDEs
 cask "keka"                   # Compression and decompression app for macOS
-cask "mat"                    # macOS app for monitoring and analyzing network traffic
+cask "mat"                    # Eclipse Memory Analyzer for java heap dumps
+{{- if .personal }}
 cask "nordvpn"                # Virtual private network (VPN) app for macOS
+{{- end }}
 cask "notunes"                # App for disabling iTunes launching when a media key is pressed
 cask "obsidian"               # Knowledge management and note-taking app
+{{- if .personal }}
 cask "openmtp"                # Android file transfer tool
 cask "openvpn-connect"        # VPN client for macOS
 cask "qbittorrent"            # BitTorrent client app for macOS
+{{- end }}
 cask "sequel-ace"             # SQLite database manager app for macOS
 cask "signal"                 # Encrypted messaging and calling app
 cask "slack"                  # Team communication and collaboration app
-cask "spotify"                  # Music streaming service app
+cask "spotify"                # Music streaming service app
+{{- if .personal }}
 cask "steam"                  # Digital distribution platform for video games
+{{- end }}
 cask "sublime-text"           # Text editor for macOS
 cask "todoist"                # App for managing tasks and to-do lists
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
