@@ -6,6 +6,9 @@ tap "homebrew/services"       # Allows managing system services with Homebrew
 brew "bitwarden-cli"          # A command-line interface for the Bitwarden password manager
 brew "chezmoi"                # A tool for managing dotfiles
 brew "diff-so-fancy"          # A tool for improving the output of Git diffs
+{{- if .work }}
+brew "dotnet@6"               # .NET 6
+{{- end }}
 brew "expect"                 # A tool for automating interactive applications
 {{- if .personal }}
 brew "git-lfs"                # A Git extension for managing large files
