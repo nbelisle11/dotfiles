@@ -14,6 +14,7 @@ module.exports = {
         "*dutchie.atlassian.net/*", // Atlassian
         "*dutchie.zoom.us/*", // Zoom
         "*dutchie.com/*", // Dutchie
+        "*github.com/GetDutchie/*", // Github
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
