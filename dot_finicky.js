@@ -18,6 +18,7 @@ module.exports = {
         "*github.com/GetDutchie/*", // Github
         "*google.com/calendar/*", // Calendar links
         "*docs.google.com/*", // Google office links 
+        "*1password.com/*", // 1password
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
