@@ -3,26 +3,51 @@ tap "homebrew/bundle"         # Allows managing multiple packages and applicatio
 tap "homebrew/services"       # Allows managing system services with Homebrew
 
 # Install command-line tools, libraries, and frameworks
+{{- if .work }}
+brew "azure-cli"
+{{ end }}
 brew "bitwarden-cli"          # A command-line interface for the Bitwarden password manager
+{{- if .work }}
+brew "cairo"                  # Vector graphics library with cross-device output support
+{{- end }}
 brew "chezmoi"                # A tool for managing dotfiles
 brew "diff-so-fancy"          # A tool for improving the output of Git diffs
 {{- if .work }}
+brew "docker"                 # Pack, ship and run any application as a lightweight container
 brew "dotnet@6"               # .NET 6
 {{- end }}
 brew "expect"                 # A tool for automating interactive applications
+{{- if .work }}
+brew "giflib"                 # Library and utilities for processing GIFs
+{{- end }}
 {{- if .personal }}
 brew "git-lfs"                # A Git extension for managing large files
 {{- end }}
+{{- if .work }}
+brew "jpeg"                   # Image manipulation library
+{{- end }}
 brew "jq"                     # A tool for processing JSON data
+{{- if .work }}
+brew "mono-libgdiplus"        # GDI+-compatible API on non-Windows operating systems
+brew "nvm"                    # A tool to manage multiple Node.js versions
+{{- end }}
 brew "python@3.9"             # Install Python 3.9
 brew "python@3.10"            # Install Python 3.10
 brew "httpie"                 # A command-line HTTP client
+{{- if .work }}
+brew "libpng"                 # Library for manipulating PNG images
+brew "librsvg"                # Library to render SVG files using Cairo
+{{- end }}
 brew "mas"                    # A command-line interface for the Mac App Store
 brew "maven"                  # A build automation tool for Java projects
 brew "mono"                   # An open-source implementation of Microsoft .NET Framework
 brew "nghttp2"                # A library for HTTP/2 and HPACK
 brew "node"                   # A JavaScript runtime built on Chrome's V8 JavaScript engine
 brew "openjdk"                # An open-source implementation of the Java SE platform
+{{- if .work }}
+brew "pango"                  # Framework for layout and rendering of i18n text
+brew "pkg-config"             # Manage compile and link flags for libraries
+{{- end }}
 brew "ripgrep"                # A line-oriented search tool that recursively searches directories
 brew "tesseract"              # A command-line OCR (Optical Character Recognition) engine
 brew "tldr"                   # A collection of simplified and community-driven man pages
@@ -34,6 +59,9 @@ brew "zsh"                    # A shell with interactive features and syntax hig
 cask "alfred"                 # A productivity application for macOS
 {{- if (eq .hostname "nate-mbp-max") }}
 cask "authy"                  # A two-factor authentication application
+{{- end }}
+{{- if .work }}
+cask "azure-data-studio"      # A Data management tool that enables working with SQL Server
 {{- end }}
 cask "bartender"              # A tool for managing menu bar items on macOS
 cask "bbedit"                 # A professional text editor for macOS
@@ -47,10 +75,11 @@ cask "caffeine"               # An application that prevents macOS from going to
 cask "calibre"                # E-book manager and reader
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
-{{- if (and .personal (not (eq .hostname "nate-mba"))) }}
+{{- if (or (.work (and .personal (not (eq .hostname "nate-mba")))) }}
 cask "dotnet-sdk"             # Software development kit for .NET Framework
 {{- end }}
 {{- if .work }}
+cask "docker"                 # App to build and share containerized applications and microservices
 cask "finicky"                # Application for customizing URLs to open in specific browsers
 {{- end }}
 cask "freedom"                # App for blocking distractions and increasing productivity
