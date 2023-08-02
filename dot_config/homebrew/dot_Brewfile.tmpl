@@ -1,7 +1,9 @@
 # Add Homebrew taps for managing packages and applications
 tap "homebrew/bundle"         # Allows managing multiple packages and applications with a single Brewfile
 tap "homebrew/services"       # Allows managing system services with Homebrew
+{{- if .work }}
 tap "isen-ng/dotnet-sdk-versions" # Allows different .NET sdk versions that you can install in parallel to the latest version provided by the official cask.
+{{ end }}
 
 # Install command-line tools, libraries, and frameworks
 {{- if .work }}
