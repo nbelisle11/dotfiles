@@ -14,7 +14,9 @@ module.exports = {
         "*dutchie.atlassian.net/*", // Atlassian
         "*dutchie.zoom.us/*", // Zoom
         "*dutchie.com/*", // Dutchie
+        "*getdutchie.slack.com/*", // Dutchie Slack links
         "*github.com/GetDutchie/*", // Github
+        "*google.com/calendar/*", // Calendar links
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
