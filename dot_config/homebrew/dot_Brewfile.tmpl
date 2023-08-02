@@ -1,6 +1,7 @@
 # Add Homebrew taps for managing packages and applications
 tap "homebrew/bundle"         # Allows managing multiple packages and applications with a single Brewfile
 tap "homebrew/services"       # Allows managing system services with Homebrew
+tap "isen-ng/dotnet-sdk-versions" # Allows different .NET sdk versions that you can install in parallel to the latest version provided by the official cask.
 
 # Install command-line tools, libraries, and frameworks
 {{- if .work }}
@@ -14,7 +15,6 @@ brew "chezmoi"                # A tool for managing dotfiles
 brew "diff-so-fancy"          # A tool for improving the output of Git diffs
 {{- if .work }}
 brew "docker"                 # Pack, ship and run any application as a lightweight container
-brew "dotnet@6"               # .NET 6
 {{- end }}
 brew "expect"                 # A tool for automating interactive applications
 {{- if .work }}
@@ -75,10 +75,11 @@ cask "caffeine"               # An application that prevents macOS from going to
 cask "calibre"                # E-book manager and reader
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
-{{- if (or .work (and .personal (not (eq .hostname "nate-mba")))) }}
+{{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "dotnet-sdk"             # Software development kit for .NET Framework
 {{- end }}
 {{- if .work }}
+cask "dotnet-sdk6-0-400"      # 6.0 version of the Software development kit for .NET Framework
 cask "finicky"                # Application for customizing URLs to open in specific browsers
 {{- end }}
 cask "freedom"                # App for blocking distractions and increasing productivity
