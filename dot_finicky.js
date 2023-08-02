@@ -17,6 +17,7 @@ module.exports = {
         "*getdutchie.slack.com/*", // Dutchie Slack links
         "*github.com/GetDutchie/*", // Github
         "*google.com/calendar/*", // Calendar links
+        "*docs.google.com/*", // Google office links 
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
