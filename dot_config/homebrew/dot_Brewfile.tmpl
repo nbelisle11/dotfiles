@@ -75,7 +75,7 @@ cask "caffeine"               # An application that prevents macOS from going to
 cask "calibre"                # E-book manager and reader
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
-{{- if (or (.work (and .personal (not (eq .hostname "nate-mba"))))) }}
+{{- if (or .work (and .personal (not (eq .hostname "nate-mba")))) }}
 cask "dotnet-sdk"             # Software development kit for .NET Framework
 {{- end }}
 {{- if .work }}
