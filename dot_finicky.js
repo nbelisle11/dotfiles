@@ -14,6 +14,7 @@ module.exports = {
         "*dutchie.atlassian.net/*", // Atlassian
         "*dutchie.zoom.us/*", // Zoom
         "*dutchie.com/*", // Dutchie
+        "*dutchie.dev/*", // Dutchie
         "*getdutchie.slack.com/*", // Dutchie Slack links
         "*github.com/GetDutchie/*", // Github
         "*google.com/calendar/*", // Calendar links
