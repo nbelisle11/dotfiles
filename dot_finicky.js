@@ -20,6 +20,7 @@ module.exports = {
         "*docs.google.com/*", // Google office links 
         "*docker.com/*", // Docker links
         "*microsoftonline.com/*", // Azure
+        "*microsoft.com/*", // Azure
         "*1password.com/*", // 1password
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
