@@ -19,6 +19,7 @@ module.exports = {
         "*google.com/calendar/*", // Calendar links
         "*docs.google.com/*", // Google office links 
         "*docker.com/*", // Docker links
+        "*microsoftonline.com/*", // Azure
         "*1password.com/*", // 1password
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
