@@ -17,6 +17,7 @@ module.exports = {
         "*dutchie.dev/*", // Dutchie
         "*getdutchie.slack.com/*", // Dutchie Slack links
         "*github.com/GetDutchie/*", // Github
+        "*paradigmreach.com/*", // paradigm
         "*google.com/calendar/*", // Calendar links
         "*docs.google.com/*", // Google office links 
         "*docker.com/*", // Docker links
