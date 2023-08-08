@@ -24,6 +24,7 @@ module.exports = {
         "*microsoftonline.com/*", // Azure
         "*microsoft.com/*", // Azure
         "*1password.com/*", // 1password
+        "*dutchie.splunkcloud.com/*", // Splunk
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
         "*.loom.com/*", // Loom
