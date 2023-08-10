@@ -23,6 +23,7 @@ module.exports = {
         "*docker.com/*", // Docker links
         "*microsoftonline.com/*", // Azure
         "*microsoft.com/*", // Azure
+        "*microsoft.net/*", // Azure
         "*1password.com/*", // 1password
         "*dutchie.splunkcloud.com/*", // Splunk
         "*.okta.com/*", // OKTA
