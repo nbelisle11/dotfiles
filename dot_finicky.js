@@ -26,7 +26,7 @@ module.exports = {
         "*microsoft.net/*", // Azure
         "*windows.net/*", // Azure
         "*1password.com/*", // 1password
-        "*dutchie.cloudflareaccess.com/*" // cloudflare
+        "*dutchie.cloudflareaccess.com/*", // cloudflare
         "*dutchie.splunkcloud.com/*", // Splunk
         "*.okta.com/*", // OKTA
         "*lucid.app/*", // Lucid suite
