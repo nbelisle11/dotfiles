@@ -1,6 +1,16 @@
 [user]
   name = Nate Belisle
   email = {{ .email }}
+{{- if .work }}
+{{- end }}
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+{{- if .work }}
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
+{{- end }}
 [core]
   hooksPath = {{ .chezmoi.homeDir }}/.git_hooks
   excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
