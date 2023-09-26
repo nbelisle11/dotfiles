@@ -72,10 +72,10 @@ cask "obsidian"               # Knowledge management and note-taking app
 cask "openmtp"                # Android file transfer tool
 cask "openvpn-connect"        # VPN client for macOS
 cask "qbittorrent"            # BitTorrent client app for macOS
-{{- end }}
 cask "sequel-ace"             # SQLite database manager app for macOS
 cask "signal"                 # Encrypted messaging and calling app
 cask "slack"                  # Team communication and collaboration app
+{{- end }}
 cask "spotify"                # Music streaming service app
 {{- if .personal }}
 cask "steam"                  # Digital distribution platform for video games
@@ -85,9 +85,11 @@ cask "todoist"                # App for managing tasks and to-do lists
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "unity-hub"              # Unity engine hub for managing different versions of the engine
 {{- end }}
+{{- if .personal }}
 cask "visual-paradigm-ce"     # UML diagramming and design tool
 cask "vlc"                    # Multimedia player app for macOS
 cask "zoom"                   # Video conferencing app for macOS
+{{- end }}
 
 # Install Mac App Store applications
 mas "GIPHY CAPTURE", id: 668208984        # GIF and video screen capture app from the Mac App Store
