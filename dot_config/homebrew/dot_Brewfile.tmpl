@@ -51,10 +51,9 @@ cask "dotnet-sdk"             # Software development kit for .NET Framework
 cask "finicky"                # Application for customizing URLs to open in specific browsers
 {{- end }}
 cask "freedom"                # App for blocking distractions and increasing productivity
-{{- if .work }}
-cask "google-chrome"          # Google's web browser
-{{- end }}
+{{- if .personal }}
 cask "google-drive"           # Cloud storage and file backup app
+{{- end }}
 cask "iterm2"                 # Terminal emulator for macOS
 cask "itsycal"                # Calendar app for macOS
 cask "jetbrains-toolbox"      # JetBrains Toolbox, an installer and manager for JetBrains IDEs
@@ -75,9 +74,7 @@ cask "qbittorrent"            # BitTorrent client app for macOS
 cask "sequel-ace"             # SQLite database manager app for macOS
 cask "signal"                 # Encrypted messaging and calling app
 cask "slack"                  # Team communication and collaboration app
-{{- end }}
 cask "spotify"                # Music streaming service app
-{{- if .personal }}
 cask "steam"                  # Digital distribution platform for video games
 {{- end }}
 cask "sublime-text"           # Text editor for macOS
