@@ -46,7 +46,7 @@ cask "calibre"                # E-book manager and reader
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
 {{- if (not (eq .hostname "nate-mba")) }}
-cask "docker"				  # Pack, ship and run any application as a lightweight container
+cask "docker"                 # Pack, ship and run any application as a lightweight container
 {{- end }}
 {{- if (and .personal (not (eq .hostname "nate-mba"))) }}
 cask "dotnet-sdk"             # Software development kit for .NET Framework
