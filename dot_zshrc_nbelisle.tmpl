@@ -117,6 +117,8 @@ MAILCHECK=0
 # Set JAVA_HOME
 {{- if (eq .hostname "nate-mba") }}
 export JAVA_HOME="/usr/bin/java"
+{{- else if .work }}
+export JAVA_HOME=/opt/homebrew/opt/sdkman-cli/libexec/candidates/java/17.0.7-zulu
 {{- else }}
 export JAVA_HOME=$(/usr/libexec/java_home)
 {{- end }}
@@ -127,3 +129,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 # Add SDKMAN to PATH
 export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+# increase the file descriptor limit to avoid maven build "too many open files" error
+ulimit -n 32768
