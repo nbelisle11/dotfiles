@@ -9,7 +9,12 @@
 if [ "$#" -lt 1 ]; then
     echo "Illegal number of parameters, must be greater than 1"
     exit -1
+{{- if .work }}
+elif ! [[ $1 =~ ^[A-Z]+\-[0-9]+ ]]; then
+    echo "Branch must start with Issue ID"
+    exit -1
 fi
+{{- end }}
 
 # Get the current date in the format YYYYMMDD
 datestr=$(date +%Y%m%d)
