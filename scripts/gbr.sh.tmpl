@@ -5,6 +5,10 @@
 # It then stashes all local changes, pulls changes from the master branch, creates a new branch with the generated name, 
 # applies all the stashed changes, and push commits the changes with the original parameter string as the commit message.
 
+# Let me call aliases
+shopt -s expand_aliases
+source ~/.bashrc
+
 # Check if there is at least one parameter given, otherwise exit the script
 if [ "$#" -lt 1 ]; then
     echo "Illegal number of parameters, must be greater than 1"
@@ -32,8 +36,8 @@ commitmsg=`echo "$@"`
 # Stash any untracked changes
 git stash --include-untracked
 
-# Pull changes from the master branch
-git pull origin master
+# Pull changes from the upstream branch
+ggpull
 
 # Create a new branch with the generated branch name
 git checkout -b $branchname
