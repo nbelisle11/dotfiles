@@ -132,3 +132,6 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 
 # increase the file descriptor limit to avoid maven build "too many open files" error
 ulimit -n 32768
+
+# Add timestamp to history
+HISTTIMEFORMAT="%F %T "
