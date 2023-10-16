@@ -10,4 +10,4 @@ if [ "$#" -lt 1 ]; then
     exit -1
 fi
 
-mvn clean install -X -DskipTests -Dverification.skip -pl $@ -am -amd
+mvn clean install -DskipTests -Dverification.skip -pl $@ -am -amd
