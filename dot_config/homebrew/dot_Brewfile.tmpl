@@ -17,11 +17,15 @@ brew "python@3.9"             # Install Python 3.9
 brew "python@3.10"            # Install Python 3.10
 brew "httpie"                 # A command-line HTTP client
 brew "mas"                    # A command-line interface for the Mac App Store
+{{- if .personal }}
 brew "maven"                  # A build automation tool for Java projects
+{{- end }}
 brew "mono"                   # An open-source implementation of Microsoft .NET Framework
 brew "nghttp2"                # A library for HTTP/2 and HPACK
 brew "node"                   # A JavaScript runtime built on Chrome's V8 JavaScript engine
+{{- if .personal }}
 brew "openjdk"                # An open-source implementation of the Java SE platform
+{{- end }}
 brew "sdkman-cli"             # Tool for managing multiple SDKs on Unix systems
 brew "ripgrep"                # A line-oriented search tool that recursively searches directories
 brew "tesseract"              # A command-line OCR (Optical Character Recognition) engine
