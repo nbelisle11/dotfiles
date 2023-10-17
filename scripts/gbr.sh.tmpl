@@ -37,7 +37,7 @@ commitmsg=`echo "$@"`
 git stash --include-untracked
 
 # Pull changes from the upstream branch
-git pull origin "$(git_current_branch)"
+git pull origin "$(gecb)"
 
 # Create a new branch with the generated branch name
 git checkout -b $branchname
