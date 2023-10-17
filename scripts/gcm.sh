@@ -7,5 +7,5 @@
 shopt -s expand_aliases
 source ~/.bashrc
 
-mainBranchName=`gemb`                  # use "gemb" aliased script to get the name of the main branch
+mainBranchName=`gmb`                  # use "gemb" aliased script to get the name of the main branch
 git checkout $mainBranchName           # switch to the main branch in the current directory
