@@ -37,7 +37,9 @@ brew "wget"                   # A command-line tool for downloading files from t
 brew "zsh"                    # A shell with interactive features and syntax highlighting
 
 # Install GUI applications
+{{- if .work }}
 cask "1password-cli"          # Command-line interface for 1Password
+{{- end }}
 cask "alfred"                 # A productivity application for macOS
 {{- if (eq .hostname "nate-mbp-max") }}
 cask "authy"                  # A two-factor authentication application
