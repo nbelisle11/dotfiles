@@ -9,6 +9,7 @@ brew "bitwarden-cli"          # A command-line interface for the Bitwarden passw
 brew "chezmoi"                # A tool for managing dotfiles
 brew "diff-so-fancy"          # A tool for improving the output of Git diffs
 brew "expect"                 # A tool for automating interactive applications
+brew "fzf"                 # A general-purpose command-line fuzzy finder.
 {{- if .personal }}
 brew "git-lfs"                # A Git extension for managing large files
 {{- end }}
@@ -38,8 +39,8 @@ brew "tldr"                   # A collection of simplified and community-driven 
 brew "tree"                   # A command-line tool to list contents of directories in a structure like format
 brew "wget"                   # A command-line tool for downloading files from the web
 brew "youtube-dl"             # A command-line tool for downloading videos from youtube.com or other video platforms
-brew "zsh"                    # A shell with interactive features and syntax highlighting
 brew "zoxide"                 # A smarter cd command, inspired by z and autojump
+brew "zsh"                    # A shell with interactive features and syntax highlighting
 
 # Install GUI applications
 {{- if .work }}
