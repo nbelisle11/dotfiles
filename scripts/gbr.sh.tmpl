@@ -20,15 +20,24 @@ elif ! [[ $1 =~ ^[A-Z]+\-[0-9]+ ]]; then
 {{- end }}
 fi
 
+{{- if .personal }}
+issueId=''
+branchTrimmed=$@
+{{- end }}
+{{- if .work }}
+issueId=$1/
+branchTrimmed=${@:2}
+{{- end }}
+
 # Get the current date in the format YYYYMMDD
-datestr=$(date +%Y%m%d)
+datestr=$(date +%y%m%d)
 
 # Strip square brackets from the branch name parameter using sed
-branchnameStripedBrackets=`echo "$@" | sed 's/[][]//g'`
+branchnameStripedBrackets=`echo "$branchTrimmed" | sed 's/[][]//g'`
 
 # Combine the current user name, current date, and stripped branch name to create a new branch name
 # Replace any spaces, angle brackets, and double quotes with hyphens using sed
-branchname=`echo $USER-$datestr-$branchnameStripedBrackets | sed 's/[ <>\"]/-/g'`
+branchname=`echo $USER/$issueId$datestr-$branchnameStripedBrackets | sed 's/[ <>\"]/-/g'`
 
 # Set the commit message to the original parameter string
 commitmsg=`echo "$@"`
