@@ -96,7 +96,16 @@ git remote set-url origin git@github.com:nbelisle11/dotfiles.git
 
 7. [Import Sequel Ace Preferences](http://stackoverflow.com/a/37145386)
 
-9. Configure nas connection to Ravenstore
+8. Configure nas connection to Ravenstore
 #Finder->Go->Connect to Server
 afp://192.168.1.32
 #u/p from BitWarden
+
+9. Lock mic input to built in mic
+Setup macOS so it will never manually change the microphone from the built-in microphone. It also will not trigger your headphones to go into ‘call’ mode, and thus it won’t lower the quality.
+- Open Audio MIDI Set-up. Then click on the + icon in the bottom left corner and add a new aggregated device. Then, in the menu select the Built-in microphone. Rename device to ‘Locked Microphone’.
+<p align="center">
+<img width="400" alt="Audio_Devices_and_Editing_dotfiles_README_md_at_main_·_nbelisle11_dotfiles" src="https://github.com/nbelisle11/dotfiles/assets/5873903/448dd431-e41c-4dca-a9c0-2b7f27b7e53a">
+</p>
+- Go to System Settings -> Sound, and select your new Locked Microphone as the system’s input device
+
