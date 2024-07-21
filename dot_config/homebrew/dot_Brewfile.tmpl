@@ -96,7 +96,9 @@ cask "openmtp"                # Android file transfer tool
 cask "openvpn-connect"        # VPN client for macOS
 cask "qbittorrent"            # BitTorrent client app for macOS
 cask "sequel-ace"             # SQLite database manager app for macOS
+{{- end }}
 cask "signal"                 # Encrypted messaging and calling app
+{{- if .personal }}
 cask "slack"                  # Team communication and collaboration app
 cask "spotify"                # Music streaming service app
 cask "steam"                  # Digital distribution platform for video games
