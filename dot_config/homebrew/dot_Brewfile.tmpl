@@ -2,6 +2,7 @@
 tap "homebrew/bundle"         # Allows managing multiple packages and applications with a single Brewfile
 tap "homebrew/services"       # Allows managing system services with Homebrew
 tap "sdkman/tap"              # Tap containing the Formula for the SDKMAN! CLI
+tap "withgraphite/tap"        # Tap containing the Formula for the Graphite CLI
 
 # Install command-line tools, libraries, and frameworks
 brew "awscli"                 # Official Amazon AWS command-line interface
@@ -14,6 +15,9 @@ brew "fzf"                    # A general-purpose command-line fuzzy finder.
 brew "gh"                     # A general-purpose command-line fuzzy finder.
 brew "git-lfs"                # A Git extension for managing large files
 brew "git-machete"            # Git repository organizer & rebase workflow automation tool
+{{- if .work }}
+brew "graphite"               # Graphite CLI to manage github interactions
+{{- end }}
 brew "jq"                     # A tool for processing JSON data
 {{- if .work }}
 brew "k9s"                    # Kubernetes CLI To Manage Your Clusters In Style!
