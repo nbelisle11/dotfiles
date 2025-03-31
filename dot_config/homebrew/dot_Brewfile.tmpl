@@ -75,6 +75,9 @@ cask "brave-browser"          # A privacy-focused web browser
 cask "caffeine"               # An application that prevents macOS from going to sleep
 {{- if .personal }}
 cask "calibre"                # E-book manager and reader
+{{- end }}
+cask "cursor"                # E-book manager and reader
+{{- if .personal }}
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
 {{- if (not (eq .hostname "nate-mba")) }}
