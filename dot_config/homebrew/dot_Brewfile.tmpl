@@ -76,7 +76,10 @@ cask "caffeine"               # An application that prevents macOS from going to
 {{- if .personal }}
 cask "calibre"                # E-book manager and reader
 {{- end }}
-cask "cursor"                # E-book manager and reader
+{{- if .work }}
+cask "chatgpt"                # OpenAI's official ChatGPT desktop app
+{{- end }}
+cask "cursor"                 # E-book manager and reader
 {{- if .personal }}
 cask "discord"                # Chat and voice app for gamers
 {{- end }}
@@ -111,7 +114,7 @@ cask "openmtp"                # Android file transfer tool
 cask "openvpn-connect"        # VPN client for macOS
 cask "qbittorrent"            # BitTorrent client app for macOS
 {{- end }}
-cask "rectangle"               # Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"              # Move and resize windows using keyboard shortcuts or snap areas
 {{- if .personal }}
 cask "sequel-ace"             # SQLite database manager app for macOS
 {{- end }}
